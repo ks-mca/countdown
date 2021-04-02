@@ -1,0 +1,121 @@
+:root{
+    --McaBlue:#183c6b;
+    --McaGreen:#8cc641;
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 220px;
+    background:var(--McaBlue);
+    display: flex;
+    align-items: center;
+}
+.container .countdownBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+}
+.container .countdownBox h2{
+    text-align: center;
+    font-size: 1.25em;
+    color: #fff !important;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 500;
+    line-height: 1.5em;
+    padding-bottom: 15px;
+}
+.container .countdownBox .countdown{
+    background: rgba(0, 0, 0, 0.1);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .countdownBox .countdown div{
+    position: relative;
+    width: 100px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.75em;
+    margin: 0 15px;
+    margin-top: -25px;
+}
+.container .countdownBox .countdown div::before{
+    content: 'text';
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    color: #fff;
+    font-size: 0.3em;
+    font-weight: 500;
+    line-height: 35px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.container .countdownBox .countdown div.day::before{
+    content: 'days';
+}
+.container .countdownBox .countdown div.hour::before{
+    content: 'hours';
+}
+.container .countdownBox .countdown div.minute::before{
+    content: 'minutes';
+}
+.container .countdownBox .countdown div.second::before{
+    content: 'seconds';
+}
+.container .countdownBox .countdown div.second, .container .countdownBox .countdown div.second::before{
+    color: var(--McaGreen);
+}
+#smallContainer{
+    width: 370px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+#smallContainer #smallCountdownBox h2{
+    font-size: 1em !important;
+}
+#smallContainer #smallCountdownBox #smallCountdown{
+    height: 70px;
+}
+
+#smallContainer #smallCountdownBox #smallCountdown div{
+    width: 55px;
+    font-size: 1.5em;
+}
+.sessionLink{
+    text-decoration: none;
+    color: #fff;
+}
+
+@media(max-width:600px){
+    .container{
+        height: 150px;
+    }
+    .container .countdownBox h2{
+        font-size: 1em;
+    }
+    .container .countdownBox .countdown{
+        height: 70px;
+    }
+    .container .countdownBox .countdown div{
+        width: 55px;
+        color: #fff;
+        font-size: 1.5em;
+        margin-top: -25px;
+    }
+}
