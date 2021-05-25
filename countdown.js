@@ -1,4 +1,4 @@
-const earlyBirdDate = new Date("May 28, 2021 17:00:00").getTime(); //Early Bird
+const earlyBirdDate = new Date("June 18, 2021 17:00:00").getTime(); //Early Bird
 //Day 1 Session 1
 const d1s1Start = new Date("August 10, 2021 11:00:00").getTime();
 const d1s1End = new Date("August 10, 2021 11:45:00").getTime();
