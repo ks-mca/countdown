@@ -150,9 +150,10 @@ const day = hour *24
             earlyBirdEndDate(), 1000
             ebZeroTimer(), 1000
             sessionEndDate(), 1000
-            if(currentTime>earlyBirdDate){
+           // if(currentTime>earlyBirdDate){
                 sessionZeroTimer(), 1000
-            }
+           // }
+           sessionZeroTimerFun(d1s1End, d1s1Start, '#d1s1Countdown', '#d1s1CountMsg','http://www.mcaaa.org')
         })
 
     function ebZeroTimer(){
@@ -174,7 +175,7 @@ const day = hour *24
     }
     function sessionZeroTimer(){
         var current = new Date().getTime(); //get the current date for expiration
-        var current = new Date(2021,07,10,13,1).getTime(); //for testing
+        //var current = new Date(2021,07,10,13,1).getTime(); //for testing
         //Day 1
         if(current>d1s1End){
             document.querySelector('#d1s1Countdown').style.display="none";
@@ -188,7 +189,7 @@ const day = hour *24
             document.querySelector('#d1s2CountMsg').innerText = "Live session has ended";
         } else if(current>d1s2Start){
             document.querySelector('#d1s2Countdown').style.display="none";
-            document.querySelector('#d1s2CountMsg').innerText = "Live Session in Progress";
+            document.querySelector('#d1s2CountMsg').innerHTML = "Live Session in Progress<br><a class='sessionLink' href='#' target='_blank'>Click here to join</a>";
         }
         if(current>d1s3End){
             document.querySelector('#d1s3Countdown').style.display="none";
@@ -240,5 +241,16 @@ const day = hour *24
         } else if(current>d3s3Start){
             document.querySelector('#d3s3Countdown').style.display="none";
             document.querySelector('#d3s3CountMsg').innerText = "Live Session in Progress";
+        }
+    }
+    function sessionZeroTimerFun(endDate, startDate, countdownTag, countdownMsgTag, liveSessionLink){
+        //var current = new Date().getTime(); //get the current date for expiration
+        var current = new Date(2021,07,10,11,1).getTime(); //for testing
+        if(current>endDate){
+            document.querySelector(countdownTag).style.display="none";
+            document.querySelector(countdownMsgTag).innerHTML = "Live session has ended<br>The replay should be available soon";
+        } else if(current>startDate){
+            document.querySelector(countdownTag).style.display="none";
+            document.querySelector(countdownMsgTag).innerHTML = "Live Session in Progress<br><a class='sessionLink' href='" +liveSessionLink+ "' target='_blank'>Click here to join</a>";
         }
     }
