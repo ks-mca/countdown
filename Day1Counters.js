@@ -32,7 +32,6 @@ var Session1Opening = {
         this.secondsId= this.dTs+'second';}
      }     
 Session1Opening.setTags();
-console.log(Session1Opening)
 sessionToFill(Session1Opening);
 //-------------------------------------------------------------------------
 //---------------- Session 2 Track 1 --------------------------------------
