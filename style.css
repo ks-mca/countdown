@@ -114,7 +114,8 @@
 }
 .sessionCountdown{
     height: 260px;
-    margin-bottom: 30px;
+    margin-bottom: 1px;
+    margin-top: 1px;
 }
 @media(max-width:600px){
     .container{
@@ -125,6 +126,9 @@
     }
     .container .countdownBox h2{
         font-size: 1em;
+    }
+    .sessionCountdown .countdownBox h2{
+        font-size: .7em;
     }
     .container .countdownBox .countdown{
         height: 70px;
