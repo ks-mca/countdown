@@ -112,9 +112,16 @@
     line-height: 200px;
     color: var(--McaGreen);
 }
+.sessionCountdown{
+    height: 260px;
+    margin-bottom: 30px;
+}
 @media(max-width:600px){
     .container{
         height: 150px;
+    }
+    .sessionCountdown{
+        height: 200px;
     }
     .container .countdownBox h2{
         font-size: 1em;
