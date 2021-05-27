@@ -24,7 +24,7 @@ var Session1Opening = {
     dayTitle: dayTitle,
     sessionName:"Keynote Speach",
     sessionPresenter:"Opening Speaker",
-    zoomLink: 'http://www.mcaaa.org',
+    zoomLink: 'http://www.mcaaa.org', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
@@ -45,7 +45,7 @@ var session2Track1 = {
     dayTitle: dayTitle,
     sessionName:"Session Name here",
     sessionPresenter:"Presenter Name here",
-    zoomLink: '#',
+    zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
@@ -66,7 +66,7 @@ var session2Track2 = {
     dayTitle: dayTitle,
     sessionName:"Session Name here",
     sessionPresenter:"Presenter Name here",
-    zoomLink: '#',
+    zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
@@ -87,7 +87,7 @@ var session2Track3 = {
     dayTitle: dayTitle,
     sessionName:"Session Name here",
     sessionPresenter:"Presenter Name here",
-    zoomLink: '#',
+    zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
@@ -108,7 +108,7 @@ var session3Track1 = {
     dayTitle: dayTitle,
     sessionName:"Session Name here",
     sessionPresenter:"Presenter Name here",
-    zoomLink: '#',
+    zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
@@ -129,7 +129,7 @@ var session3Track2 = {
     dayTitle: dayTitle,
     sessionName:"Session Name here",
     sessionPresenter:"Presenter Name here",
-    zoomLink: '#',
+    zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
@@ -150,7 +150,7 @@ var session3Track3 = {
     dayTitle: dayTitle,
     sessionName:"Session Name here",
     sessionPresenter:"Presenter Name here",
-    zoomLink: '#',
+    zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
@@ -171,7 +171,7 @@ var session4 = {
     dayTitle: dayTitle,
     sessionName:"Virtual Reception",
     sessionPresenter:"Presenter Name here",
-    zoomLink: '#',
+    zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
