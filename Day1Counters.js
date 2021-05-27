@@ -1,4 +1,4 @@
-HideJSMessage();
+HideField('.JSNote');
 //---------------------Day 1-------------------------------------------
 var dayTimer = {
     session1StartTime:new Date("August 10, 2021 11:00:00").getTime(),
