@@ -1,0 +1,143 @@
+LMS Flow for main day page
+
+*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/  Day 1  */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
+-top of page includes short intro video clip to welcome everyone and reference the countdown below it.
+-countdown timer box that is dynamicly changing with the time
+-outline for the day
+
+=======================================LMS Page Layout=================================================
+-chapter 1 = Opening speaker
+--Lesson = includes bio and any additional info. specific training countdown include in the description which will unveil the zoom link based on timer. {have link commented out in HTML for quick transition should timer javascript fail}
+-chapter 2 = Break
+?? Lesson = Trivia/Game info?
+-chapter 3 = Session 2 group
+--Lesson 1 = Track 1 session info and speaker(s) bio. specific training countdown included in the description which will unveil the zoom link based on timer. {comment out link in HTML for quick transition if needed}
+--Lesson 2 = Track 2 session info and speaker(s) bio. specific training countdown included in the description which will unveil the zoom link based on timer. {comment out link in HTML for quick transition if needed}
+--Lesson 3 = Track 3 session info and speaker(s) bio. specific training countdown included in the description which will unveil the zoom link based on timer. {comment out link in HTML for quick transition if needed}
+-chapter 4 = Break
+?? Lesson = Trivia/Game info?
+-chapter 5 = Session 3 group
+--Lesson 1 = Track 1 session info and speaker(s) bio. specific training countdown included in the description which will unveil the zoom link based on timer. {comment out link in HTML for quick transition if needed}
+--Lesson 2 = Track 2 session info and speaker(s) bio. specific training countdown included in the description which will unveil the zoom link based on timer. {comment out link in HTML for quick transition if needed}
+--Lesson 3 = Track 3 session info and speaker(s) bio. specific training countdown included in the description which will unveil the zoom link based on timer. {comment out link in HTML for quick transition if needed}
+
+============================Countdown timer for the different session blocks===========================
+-First phase
+--"Welcome to MCA's 2nd Annual Virtual Conference" <br> "Our keynote speaker will kick us off in:" <br> [countdown timer to keynote] {timer counts down to session 1 start time}
+
+-Second phase
+--"Join us now for our opening keynote speaker" <br> "Information about the session" [link to the keynote speaker page] & "Or jump right in to the presentation" [zoom link to go straight into the room] <br> "Scheduled time remaining:" [countdown to keynote end] {timer counts down to session 1 end time}
+
+-Third phase
+--"We hoped you enjoyed our keynote" <br> "join us for some fun and trivia before the next session beings" [link to game (zoom?)] <br> "2nd Session presentations will begin in:" [countdown to 2nd sessions] {timer counts down to session 2 start time}
+
+-Fourth phase
+--"We have 3 terrific sessions going on right now, click the 2nd session topic link of your choice below to gain access" <br> "Session 2 trainings will end in:" [countdown to end of session 2] {timer counts down to session 2 end time}
+
+-Fifth phase
+--"We hope you enjoyed our second set of sessions" <br> "Join us for some trivia" [link to trivia] <br> "Session 3 trainings will begin in:" [countdown to start of session 3] {timer counts down to session 3 start time}
+
+-6th phase
+--"We have 3 terrific sessions going on right now, click the 3rd session topic link of your choice below to gain access" <br> "Session 2 trainings will end in:" [countdown to end of session 2] {timer counts down to session 3 end time}
+
+-7th phase
+--"We hope you have enjoyed Day 1 of our virtual conference." <br> "We hope you you will return tomorrow for additional content." <br> "Sessions recordings will be available here soon."
+??? Possibly add an outro video for the day that includes encourging attendees to visit the exhibitor/sponsor booths [link to booth page]
+
+*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/  Day 2  */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
+-top of page includes short intro video clip to welcome everyone to day 2 and reference the countdown below it.
+-countdown timer box that is dynamicly changing with the time
+-outline for the day
+
+=======================================LMS Page Layout=================================================
+-chapter 1 = Opening speaker
+--Lesson = includes bio and any additional info. specific training countdown include in the description which will unveil the zoom link based on timer. {have link commented out in HTML for quick transition should timer javascript fail}
+-chapter 2 = Break
+?? Lesson = Trivia/Game info?
+-chapter 3 = Session 2 group
+--Lesson 1 = Track 1 session info and speaker(s) bio. specific training countdown included in the description which will unveil the zoom link based on timer. {comment out link in HTML for quick transition if needed}
+--Lesson 2 = Track 2 session info and speaker(s) bio. specific training countdown included in the description which will unveil the zoom link based on timer. {comment out link in HTML for quick transition if needed}
+--Lesson 3 = Track 3 session info and speaker(s) bio. specific training countdown included in the description which will unveil the zoom link based on timer. {comment out link in HTML for quick transition if needed}
+-chapter 4 = Break
+?? Lesson = Trivia/Game info?
+-chapter 5 = Session 3 group
+--Lesson 1 = Track 1 session info and speaker(s) bio. specific training countdown included in the description which will unveil the zoom link based on timer. {comment out link in HTML for quick transition if needed}
+--Lesson 2 = Track 2 session info and speaker(s) bio. specific training countdown included in the description which will unveil the zoom link based on timer. {comment out link in HTML for quick transition if needed}
+--Lesson 3 = Track 3 session info and speaker(s) bio. specific training countdown included in the description which will unveil the zoom link based on timer. {comment out link in HTML for quick transition if needed}
+-chapter 6 = Break
+?? Lesson = Trivia/Game info?
+-chapter 7 = Reception
+--Lesson = Reception info with countdown and auto changing link. {comment out link in HTML for quick transition if needed}
+
+============================Countdown timer for the different session blocks===========================
+-First phase
+--"Welcome to MCA's 2nd Annual Virtual Conference" <br> "Our keynote speaker will kick us off in:" <br> [countdown timer to keynote] {timer counts down to session 1 start time}
+
+-Second phase
+--"Join us now for our opening keynote speaker" <br> "Information about the session" [link to the keynote speaker page] & "Or jump right in to the presentation" [zoom link to go straight into the room] <br> "Scheduled time remaining:" [countdown to keynote end] {timer counts down to session 1 end time}
+
+-Third phase
+--"We hoped you enjoyed our keynote" <br> "join us for some fun and trivia before the next session beings" [link to game (zoom?)] <br> "2nd Session presentations will begin in:" [countdown to 2nd sessions] {timer counts down to session 2 start time}
+
+-Fourth phase
+--"We have 3 terrific sessions going on right now, click the 2nd session topic link of your choice below to gain access" <br> "Session 2 trainings will end in:" [countdown to end of session 2] {timer counts down to session 2 end time}
+
+-Fifth phase
+--"We hope you enjoyed our second set of sessions" <br> "Join us for some trivia" [link to trivia] <br> "Session 3 trainings will begin in:" [countdown to start of session 3] {timer counts down to session 3 start time}
+
+-6th phase
+--"We have 3 terrific sessions going on right now, click the 3rd session topic link of your choice below to gain access" <br> "Session 2 trainings will end in:" [countdown to end of session 2] {timer counts down to session 3 end time}
+
+-7th phase
+--"We hope you enjoyed our training sessions today" <br> "Join us for some trivia" [link to trivia] <br> "A meet & greet reception for executive directors will begin in:" [countdown to start of session 4] {timer counts down to session 4 start time}
+
+-8th phase
+--"Our reception is going on right now, click the link to drop in and say hello" [zoom link] <br> "The reception will end in:" [countdown to end of reception] {timer counts down to session 4 end time}
+
+-9th phase
+--"We hope you have enjoyed Day 2 of our virtual conference." <br> "We hope you you will return tomorrow for additional content." <br> "Sessions recordings will be available here soon."
+??? Possibly add an outro video for the day that includes encourging attendees to visit the exhibitor/sponsor booths [link to booth page]
+
+*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/  Day 3  */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
+-top of page includes short intro video clip to welcome everyone to final day and reference the countdown below it.
+-countdown timer box that is dynamicly changing with the time
+-outline for the day
+
+=======================================LMS Page Layout=================================================
+-chapter 1 = Opening speaker
+--Lesson = includes bio and any additional info. specific training countdown include in the description which will unveil the zoom link based on timer. {have link commented out in HTML for quick transition should timer javascript fail}
+-chapter 2 = Break
+?? Lesson = Trivia/Game info?
+-chapter 3 = Session 2 group
+--Lesson 1 = Track 1 session info and speaker(s) bio. specific training countdown included in the description which will unveil the zoom link based on timer. {comment out link in HTML for quick transition if needed}
+--Lesson 2 = Track 2 session info and speaker(s) bio. specific training countdown included in the description which will unveil the zoom link based on timer. {comment out link in HTML for quick transition if needed}
+--Lesson 3 = Track 3 session info and speaker(s) bio. specific training countdown included in the description which will unveil the zoom link based on timer. {comment out link in HTML for quick transition if needed}
+-chapter 4 = Break
+?? Lesson = Trivia/Game info?
+-chapter 5 = Session 3 group
+--Lesson 1 = Track 1 session info and speaker(s) bio. specific training countdown included in the description which will unveil the zoom link based on timer. {comment out link in HTML for quick transition if needed}
+--Lesson 2 = Track 2 session info and speaker(s) bio. specific training countdown included in the description which will unveil the zoom link based on timer. {comment out link in HTML for quick transition if needed}
+--Lesson 3 = Track 3 session info and speaker(s) bio. specific training countdown included in the description which will unveil the zoom link based on timer. {comment out link in HTML for quick transition if needed}
+
+============================Countdown timer for the different session blocks===========================
+-First phase
+--"Welcome to MCA's 2nd Annual Virtual Conference" <br> "Our keynote speaker will kick us off in:" <br> [countdown timer to keynote] {timer counts down to session 1 start time}
+
+-Second phase
+--"Join us now for our opening keynote speaker" <br> "Information about the session" [link to the keynote speaker page] & "Or jump right in to the presentation" [zoom link to go straight into the room] <br> "Scheduled time remaining:" [countdown to keynote end] {timer counts down to session 1 end time}
+
+-Third phase
+--"We hoped you enjoyed our keynote" <br> "join us for some fun and trivia before the next session beings" [link to game (zoom?)] <br> "2nd Session presentations will begin in:" [countdown to 2nd sessions] {timer counts down to session 2 start time}
+
+-Fourth phase
+--"We have 3 terrific sessions going on right now, click the 2nd session topic link of your choice below to gain access" <br> "Session 2 trainings will end in:" [countdown to end of session 2] {timer counts down to session 2 end time}
+
+-Fifth phase
+--"We hope you enjoyed our second set of sessions" <br> "Join us for some trivia" [link to trivia] <br> "Session 3 trainings will begin in:" [countdown to start of session 3] {timer counts down to session 3 start time}
+
+-6th phase
+--"We have 3 terrific sessions going on right now, click the 3rd session topic link of your choice below to gain access" <br> "Session 2 trainings will end in:" [countdown to end of session 2] {timer counts down to session 3 end time}
+
+-7th phase
+--"We hope you have enjoyed Day 1 of our virtual conference." <br> "We hope you you will return tomorrow for additional content." <br> "Sessions recordings will be available here soon."
+??? Possibly add an outro video for the entire conference that includes encourging attendees to visit the exhibitor/sponsor booths [link to booth page], and reminds them that the "replay" content will be available until x date.
