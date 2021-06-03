@@ -138,3 +138,14 @@ function HideField(tag){//Pass a class or id tag to hide
 function adjustedTime(now, dayAdjust, hourAdjust, minuteAdjust){//Adjust the current time by supplied days, hours, minutes
     return now + ((dayAdjust *1000*60*60*24)+(hourAdjust*1000*60*60)+(minuteAdjust*1000*60));   
 }
+//------------------------------------LMS Functions--------------------------------------------------
+//assign session values to pass to HTML template
+function LMSToFill (sessionToSetup){
+    LMS_FillPage(sessionToSetup.msgTag, sessionToSetup.dayTitle, sessionToSetup.sessionName, sessionToSetup.sessionPresenter, sessionToSetup.countdownTag, sessionToSetup.dayId, sessionToSetup.hourId, sessionToSetup.minuteId, sessionToSetup.secondsId);
+}
+
+//set Html Templates for countdown clocks
+function LMS_FillPage (h2Tag, dayTitle, sessionTitle, sessionSpeaker, counterTag, dayTag, hourTag, minuteTag, secondsTag){
+    var temp = document.querySelector('#template');
+    temp.innerHTML+="<div class='container sessionCountdown'><div class='countdownBox'><div id="+h2Tag+"><h2 class='dayTitle'>"+dayTitle+"</h2><h2 class='sessionTitle'>"+sessionTitle+"</h2><h2 class='sessionSpeaker'>"+sessionSpeaker+"</h2><h2 class='beginText'>Will Begin In:</h2></div><div id="+counterTag+" class='countdown'><div id="+dayTag+" class='day'></div><div id="+hourTag+" class='hour'></div><div id="+minuteTag+" class='minute'></div><div id="+secondsTag+"  class='second'></div></div></div>";
+}
