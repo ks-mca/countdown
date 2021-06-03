@@ -170,7 +170,7 @@ sessionToFill(session3Track3);
 //Set the intervals for each session to update
 setInterval(function(){
     var currentTime = new Date().getTime();
-    var newTime = adjustedTime(currentTime, 0+68, 0, 0+6); //for testing
+    var newTime = adjustedTime(currentTime, 0+68, 0, 0+6+57); //for testing
     currentTime = newTime; //for testing
 
     //Opening Speaker
