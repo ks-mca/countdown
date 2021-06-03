@@ -123,7 +123,7 @@ function sessionInProgress(timerTag, msgDisplayTag, sessionLink, buttonToUse, se
         document.querySelector("#"+msgDisplayTag).innerHTML += "<h4>The "+sessionType+" will end soon</h4>";
     }
     else if(displayCounter=="soon"){//Session is about to begin. Displayed for x minutes before session start time
-        document.querySelector("#"+msgDisplayTag+" .introMsg").innerText = sessionType+" is starting soon";
+        HideField("#"+msgDisplayTag+" .introMsg");
         document.querySelector("#"+msgDisplayTag).innerHTML += "<h4>The "+sessionType+" will begin in:</h4>";
     }
     else{//Session in progress
