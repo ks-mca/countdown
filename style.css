@@ -157,6 +157,11 @@
     height: auto;
     max-width: 100%;
 }
+.sessionLink img:hover{
+    transform: scale(1.15);
+    transform-origin: bottom;
+    transition: ease 250ms;
+}
 @media(max-width:600px){
     .container{
         height: 150px;

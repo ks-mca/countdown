@@ -52,7 +52,7 @@ const PresentationButton = 'https://ks-mca.github.io/countdown/JoinPresentationB
 const EventButton = 'https://ks-mca.github.io/countdown/JoinEventButton(green).png';
 
 function updateCountdowns(time, session){
-    if((adjustedTime(time, 0, 0, 5)>=session.sessionTimeStart)&&(adjustedTime(time, 0, 0, -10)<session.sessionTimeEnd)){//Enable the link 5 minutes before start time and keep up for 10 minutes after the end time
+    if((adjustedTime(time, 0, 0, 5)>=session.sessionTimeStart)&&(adjustedTime(time, 0, 0, -5)<session.sessionTimeEnd)){//Enable the link 5 minutes before start time and keep up for 5 minutes after the end time
         if(session.stopTimer==0){//Display the link with a countdown to start
             if(session.dTs=="Session1"){
                 sessionInProgress(session.countdownTag, session.msgTag, session.zoomLink, PresentationButton, "presentation", "soon");
@@ -90,7 +90,7 @@ function updateCountdowns(time, session){
             session.stopTimer=3;
         }
     }
-    else if((adjustedTime(time, 0, 0, -10)>session.sessionTimeEnd)&&(session.stopTimer<4)){//Display the ended message only
+    else if((adjustedTime(time, 0, 0, -5)>session.sessionTimeEnd)&&(session.stopTimer<4)){//Display the ended message only
         sessionEnded(session.countdownTag, session.msgTag);
         session.stopTimer=4;
     }
@@ -120,14 +120,14 @@ function sessionInProgress(timerTag, msgDisplayTag, sessionLink, buttonToUse, se
     if(displayCounter=="hide"){//Session is almost over. Displayed for x mins after session end time
         HideField("#"+timerTag);
         HideField("#"+msgDisplayTag+" .introMsg");
-        document.querySelector("#"+msgDisplayTag).innerHTML += "<h4>The "+sessionType+" will end soon</h4>";
+        document.querySelector("#"+msgDisplayTag).innerHTML += "<h4>This "+sessionType+" will end soon</h4>";
     }
     else if(displayCounter=="soon"){//Session is about to begin. Displayed for x minutes before session start time
         HideField("#"+msgDisplayTag+" .introMsg");
-        document.querySelector("#"+msgDisplayTag).innerHTML += "<h4>The "+sessionType+" will begin in:</h4>";
+        document.querySelector("#"+msgDisplayTag).innerHTML += "<h4>This "+sessionType+" will begin in:</h4>";
     }
     else{//Session in progress
-        document.querySelector("#"+msgDisplayTag).innerHTML += "<h4>The "+sessionType+" will conclude in:</h4>";
+        document.querySelector("#"+msgDisplayTag).innerHTML += "<h4>This "+sessionType+" will conclude in:</h4>";
     }
 }
 
