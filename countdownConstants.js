@@ -119,6 +119,7 @@ function sessionInProgress(timerTag, msgDisplayTag, sessionLink, buttonToUse, se
     
     if(displayCounter=="hide"){//Session is almost over. Displayed for x mins after session end time
         HideField("#"+timerTag);
+        HideField("#"+msgDisplayTag+" .introMsg");
         document.querySelector("#"+msgDisplayTag).innerHTML += "<h4>The "+sessionType+" will end soon</h4>";
     }
     else if(displayCounter=="soon"){//Session is about to begin. Displayed for x minutes before session start time
