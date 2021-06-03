@@ -1,5 +1,12 @@
-HideField('.JSNote');
-//---------------------Day 1-------------------------------------------
+/*
+Code writen for MCA Virtual Conference 2021 Day 3
+Author: Keith Schafer
+
+Provide the Session information need to populate the Day3Counters.html page.
+*/
+
+HideField('.JSNote'); //hide the enable javascript message
+//---------------------Day 3-------------------------------------------
 var dayTimer = {
     session1StartTime:new Date("August 12, 2021 11:00:00").getTime(),
     session1EndTime:new Date("August 12, 2021 11:45:00").getTime(),
@@ -162,11 +169,11 @@ sessionToFill(session3Track3);
 //-------------------------------------------------------------------------
 
 
-//Control the countdowns
+//Set the intervals for each session to update
 setInterval(function(){
     var currentTime = new Date().getTime();
-    // var currentTime = new Date(2021,07,10,11,1).getTime(); //for testing
-    // var currentTime = new Date(2021,07,10,12,1).getTime(); //for testing 
+    // var newTime = adjustedTime(currentTime, 0, 0, 0); //for testing
+    // currentTime = newTime; //for testing
 
     //Opening Speaker
     updateCountdowns(currentTime,Session1Opening), 1000;

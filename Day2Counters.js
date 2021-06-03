@@ -1,5 +1,12 @@
-HideField('.JSNote');
-//---------------------Day 1-------------------------------------------
+/*
+Code writen for MCA Virtual Conference 2021 Day 2
+Author: Keith Schafer
+
+Provide the Session information need to populate the Day2Counters.html page.
+*/
+
+HideField('.JSNote'); //hide the enable javascript message
+//---------------------Day 2-------------------------------------------
 var dayTimer = {
     session1StartTime:new Date("August 11, 2021 11:00:00").getTime(),
     session1EndTime:new Date("August 11, 2021 11:45:00").getTime(),
@@ -23,7 +30,7 @@ var Session1Opening = {
     dTs:'Session1',
     dayTitle: dayTitle,
     sessionName:"Keynote Speach",
-    sessionPresenter:"Opening Speaker",
+    sessionPresenter:"Donna Beegle",
     zoomLink: 'http://www.mcaaa.org', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
@@ -43,8 +50,8 @@ var session2Track1 = {
     sessionTimeEnd: dayTimer.session2EndTime,
     dTs:'Session2Track1',
     dayTitle: dayTitle,
-    sessionName:"Session Name here",
-    sessionPresenter:"Presenter Name here",
+    sessionName:"Leveraging Data Locally",
+    sessionPresenter:"Paige Teegarden",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
@@ -65,7 +72,7 @@ var session2Track2 = {
     dTs:'Session2Track2',
     dayTitle: dayTitle,
     sessionName:"Session Name here",
-    sessionPresenter:"Presenter Name here",
+    sessionPresenter:"Donna Beegle",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
@@ -128,7 +135,7 @@ var session3Track2 = {
     dTs:'Session3Track2',
     dayTitle: dayTitle,
     sessionName:"Session Name here",
-    sessionPresenter:"Presenter Name here",
+    sessionPresenter:"Donna Beegle",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
@@ -169,8 +176,8 @@ var session4 = {
     sessionTimeEnd: dayTimer.session4EndTime,
     dTs:'Session4',
     dayTitle: dayTitle,
-    sessionName:"Virtual Reception",
-    sessionPresenter:"Presenter Name here",
+    sessionName:"Conference Awards Reception",
+    sessionPresenter:"Presented by MCA",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
@@ -184,15 +191,12 @@ var session4 = {
 session4.setTags();
 sessionToFill(session4);
 //-------------------------------------------------------------------------
-// Adjust HTML for the reception message (Session 4)
-document.querySelector('#'+session4.msgTag).innerHTML="Virtual Reception for new directors<br>Begins in:";
-//-------------------------------------------------------------------------
 
-//Control the countdowns
+//Set the intervals for each session to update
 setInterval(function(){
     var currentTime = new Date().getTime();
-    // var currentTime = new Date(2021,07,10,11,1).getTime(); //for testing
-    // var currentTime = new Date(2021,07,10,12,1).getTime(); //for testing 
+    // var newTime = adjustedTime(currentTime, 0, 0, 0); //for testing
+    // currentTime = newTime; //for testing
 
     //Opening Speaker
     updateCountdowns(currentTime,Session1Opening), 1000;

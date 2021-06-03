@@ -101,6 +101,42 @@
     text-decoration: none;
     color: #fff;
 }
+.container .countdownBox .sessionTitle, .container .countdownBox .sessionSpeaker, .container .countdownBox .beginText{
+    line-height: .9em;
+}
+.container .countdownBox .dayTitle{
+    font-weight: 600;
+}
+.container .countdownBox .sessionTitle{
+    font-style: oblique;
+    font-size: 1.7em;
+}
+.container .countdownBox .sessionSpeaker{
+    font-size: 1em;
+}
+.container .countdownBox .beginText{
+    font-size: .8em;
+    text-decoration: underline;
+    padding-top: 3px;
+}
+.container .countdownBox h3{
+    font-size: 1.7em;
+    text-align: center;
+    color: #fff !important;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    line-height: 1.5em;
+}
+.container .countdownBox h4{
+    font-size: .7em;
+    text-align: center;
+    color: #fff !important;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    line-height: 1.5em;
+}
 .JSNote{
     width: 100%;
     height: 200px;
@@ -116,6 +152,10 @@
     height: 260px;
     margin-bottom: 1px;
     margin-top: 1px;
+}
+.sessionLink img{
+    height: auto;
+    max-width: 100%;
 }
 @media(max-width:600px){
     .container{
@@ -138,5 +178,29 @@
         color: #fff;
         font-size: 1.5em;
         margin-top: -25px;
+    }
+    .container .countdownBox .sessionTitle, .container .countdownBox .sessionSpeaker, .container .countdownBox .beginText{
+        line-height: .8em;
+    }
+    .container .countdownBox .sessionTitle{
+        font-style: oblique;
+        font-size: 1.1em;
+    }
+    .container .countdownBox .sessionSpeaker{
+        font-size: .8em;
+    }
+    .container .countdownBox .beginText{
+        font-size: .7em;
+        text-decoration: underline;
+        padding-top: 3px;
+    }
+    .container .countdownBox h3{
+        font-size: 1em;
+    }
+    .sessionLink img{
+        max-width: 70%;
+    }
+    .container .countdownBox h4{
+        font-size: .6em;
     }
 }

@@ -1,4 +1,11 @@
-HideField('.JSNote');
+/*
+Code writen for MCA Virtual Conference 2021 Day 1
+Author: Keith Schafer
+
+Provide the Session information need to populate the Day1Counters.html page.
+*/
+
+HideField('.JSNote'); //hide the enable javascript message
 //---------------------Day 1-------------------------------------------
 var dayTimer = {
     session1StartTime:new Date("August 10, 2021 11:00:00").getTime(),
@@ -19,8 +26,8 @@ var Session1Opening = {
     sessionTimeEnd: dayTimer.session1EndTime,
     dTs:'Session1',
     dayTitle: dayTitle,
-    sessionName:"Keynote Speach",
-    sessionPresenter:"Opening Speaker",
+    sessionName:"Keynote Speaker",
+    sessionPresenter:"Dr. Mona Hanna Attisha",
     zoomLink: 'http://www.mcaaa.org', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
@@ -40,8 +47,8 @@ var session2Track1 = {
     sessionTimeEnd: dayTimer.session2EndTime,
     dTs:'Session2Track1',
     dayTitle: dayTitle,
-    sessionName:"Session Name here",
-    sessionPresenter:"Presenter Name here",
+    sessionName:"Immigrant Integration",
+    sessionPresenter:"Presented By: Global Detroit",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
@@ -61,8 +68,8 @@ var session2Track2 = {
     sessionTimeEnd: dayTimer.session2EndTime,
     dTs:'Session2Track2',
     dayTitle: dayTitle,
-    sessionName:"Session Name here",
-    sessionPresenter:"Presenter Name here",
+    sessionName:"Living and Leading Boldly in Your 100-Year Life",
+    sessionPresenter:"Barbara Pagano",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
@@ -82,8 +89,8 @@ var session2Track3 = {
     sessionTimeEnd: dayTimer.session2EndTime,
     dTs:'Session2Track3',
     dayTitle: dayTitle,
-    sessionName:"Session Name here",
-    sessionPresenter:"Presenter Name here",
+    sessionName:"Cybersecurity Playbook in Action",
+    sessionPresenter:"Ryan Peasly (WIPFLI) & Brad Michaud (OLHSA)",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
@@ -124,8 +131,8 @@ var session3Track2 = {
     sessionTimeEnd: dayTimer.session3EndTime,
     dTs:'Session3Track2',
     dayTitle: dayTitle,
-    sessionName:"Session Name here",
-    sessionPresenter:"Presenter Name here",
+    sessionName:"Redistricing",
+    sessionPresenter:"Jim Masters",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
@@ -145,8 +152,8 @@ var session3Track3 = {
     sessionTimeEnd: dayTimer.session3EndTime,
     dTs:'Session3Track3',
     dayTitle: dayTitle,
-    sessionName:"Session Name here",
-    sessionPresenter:"Presenter Name here",
+    sessionName:"How Community Colleges and CAAs can partner up",
+    sessionPresenter:"Steph Smith (NCAP)",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
@@ -160,16 +167,17 @@ var session3Track3 = {
 session3Track3.setTags();
 sessionToFill(session3Track3);
 //-------------------------------------------------------------------------
-
+//Set the intervals for each session to update
 setInterval(function(){
     var currentTime = new Date().getTime();
-    // var currentTime = new Date(2021,07,10,11,1).getTime(); //for testing
-    // var currentTime = new Date(2021,07,10,12,1).getTime(); //for testing 
+    // var newTime = adjustedTime(currentTime, 0, 0, 0); //for testing
+    //currentTime = newTime; //for testing
 
     //Opening Speaker
     updateCountdowns(currentTime,Session1Opening), 1000;
 
     //Session 2
+    //updateCountdowns(newTime,session2Track1), 1000;
     updateCountdowns(currentTime,session2Track1), 1000;
     updateCountdowns(currentTime,session2Track2), 1000;
     updateCountdowns(currentTime,session2Track3), 1000;
