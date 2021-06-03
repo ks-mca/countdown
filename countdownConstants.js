@@ -46,10 +46,10 @@ function endSecond(sessionTimeSlot, now){
 }
 //------------------------------------------------------------
 //Update HTML with current countdown values and text
-const JoinButton = '/Join Button(green).png';
-const ConversationButton = '/Join Conversation Button(green).png';
-const PresentationButton = '/Join Presentation Button(green).png';
-const EventButton = '/Join Event Button(green).png';
+const JoinButton = '/JoinButton(green).png';
+const ConversationButton = '/JoinConversationButton(green).png';
+const PresentationButton = '/JoinPresentationButton(green).png';
+const EventButton = '/JoinEventButton(green).png';
 
 function updateCountdowns(time, session){
     if((adjustedTime(time, 0, 0, 5)>=session.sessionTimeStart)&&(adjustedTime(time, 0, 0, -10)<session.sessionTimeEnd)){//Enable the link 5 minutes before start time and keep up for 10 minutes after the end time
