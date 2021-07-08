@@ -47,8 +47,8 @@ var session2Track1 = {
     sessionTimeEnd: dayTimer.session2EndTime,
     dTs:'Session2Track1',
     dayTitle: dayTitle,
-    sessionName:"Building Immigrant Inclusion to Local Anti-Poverty and Economic Opportunity Work",
-    sessionPresenter:"Global Michigan & Global Detroit",
+    sessionName:"The Presentation",
+    sessionPresenter:"",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
@@ -68,8 +68,8 @@ var session2Track2 = {
     sessionTimeEnd: dayTimer.session2EndTime,
     dTs:'Session2Track2',
     dayTitle: dayTitle,
-    sessionName:"Living and Leading Boldly in Your 100-Year Life",
-    sessionPresenter:"Barbara Pagano",
+    sessionName:"The Presentation",
+    sessionPresenter:"",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
@@ -89,8 +89,8 @@ var session2Track3 = {
     sessionTimeEnd: dayTimer.session2EndTime,
     dTs:'Session2Track3',
     dayTitle: dayTitle,
-    sessionName:"Cybersecurity Playbook in Action",
-    sessionPresenter:"WIPFLI & OLHSA",
+    sessionName:"The Presentation",
+    sessionPresenter:"",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
@@ -110,8 +110,8 @@ var session3Track1 = {
     sessionTimeEnd: dayTimer.session3EndTime,
     dTs:'Session3Track1',
     dayTitle: dayTitle,
-    sessionName:"Creating Fair Districts",
-    sessionPresenter:"Jim Masters",
+    sessionName:"The Presentation",
+    sessionPresenter:"",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
@@ -131,8 +131,8 @@ var session3Track2 = {
     sessionTimeEnd: dayTimer.session3EndTime,
     dTs:'Session3Track2',
     dayTitle: dayTitle,
-    sessionName:"Economic Mobility through SNAP E&T Community Partnerships – How Community Colleges and Community Action Agencies can partner up",
-    sessionPresenter:"NCAP & The Association of Community College Trustees",
+    sessionName:"The Presentation",
+    sessionPresenter:"",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
@@ -152,8 +152,8 @@ var session3Track3 = {
     sessionTimeEnd: dayTimer.session3EndTime,
     dTs:'Session3Track3',
     dayTitle: dayTitle,
-    sessionName:"Moving from Fundraising to Philanthropy",
-    sessionPresenter:"Regina Pinney",
+    sessionName:"The Presentation",
+    sessionPresenter:"",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
