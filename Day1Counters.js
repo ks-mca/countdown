@@ -26,8 +26,8 @@ var Session1Opening = {
     sessionTimeEnd: dayTimer.session1EndTime,
     dTs:'Session1',
     dayTitle: dayTitle,
-    sessionName:"What the Eyes Don't See: Stories from the Frontlines of the Flint Water Crisis",
-    sessionPresenter:"Dr. Mona Hanna-Attisha",
+    sessionName:"Keynote Presentation",
+    sessionPresenter:"",
     zoomLink: 'http://www.mcaaa.org', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
