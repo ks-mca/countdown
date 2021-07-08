@@ -66,5 +66,4 @@ var Session1Opening = {
     }
 }
 Session1Opening.setTags();
-sessionToFill(Session1Opening);
 //-------------------------------------------------------------------------

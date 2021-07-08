@@ -18,7 +18,7 @@ var dayTimer = {
     session3EndTime:new Date("August 10, 2021 14:30:00").getTime(),
     s3StopTimer:0
 }
-const dayTitle = "MCA Virtual Summer Conference Day 1"
+const dayTitle = ""
 //-------------Day 1 Sessions-------------------------------------------
 //------------Opening Speaker-------------------------------------------
 var Session1Opening = {
@@ -26,8 +26,8 @@ var Session1Opening = {
     sessionTimeEnd: dayTimer.session1EndTime,
     dTs:'Session1',
     dayTitle: dayTitle,
-    sessionName:"Keynote Speaker",
-    sessionPresenter:"Dr. Mona Hanna Attisha",
+    sessionName:"What the Eyes Don't See: Stories from the Frontlines of the Flint Water Crisis",
+    sessionPresenter:"Dr. Mona Hanna-Attisha",
     zoomLink: 'http://www.mcaaa.org', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
@@ -47,8 +47,8 @@ var session2Track1 = {
     sessionTimeEnd: dayTimer.session2EndTime,
     dTs:'Session2Track1',
     dayTitle: dayTitle,
-    sessionName:"Immigrant Integration",
-    sessionPresenter:"Presented By: Global Detroit",
+    sessionName:"Building Immigrant Inclusion to Local Anti-Poverty and Economic Opportunity Work",
+    sessionPresenter:"Global Michigan & Global Detroit",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
@@ -90,7 +90,7 @@ var session2Track3 = {
     dTs:'Session2Track3',
     dayTitle: dayTitle,
     sessionName:"Cybersecurity Playbook in Action",
-    sessionPresenter:"Ryan Peasly (WIPFLI) & Brad Michaud (OLHSA)",
+    sessionPresenter:"WIPFLI & OLHSA",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
@@ -110,8 +110,8 @@ var session3Track1 = {
     sessionTimeEnd: dayTimer.session3EndTime,
     dTs:'Session3Track1',
     dayTitle: dayTitle,
-    sessionName:"Session Name here",
-    sessionPresenter:"Presenter Name here",
+    sessionName:"Creating Fair Districts",
+    sessionPresenter:"Jim Masters",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
@@ -131,8 +131,8 @@ var session3Track2 = {
     sessionTimeEnd: dayTimer.session3EndTime,
     dTs:'Session3Track2',
     dayTitle: dayTitle,
-    sessionName:"Redistricting",
-    sessionPresenter:"Jim Masters",
+    sessionName:"Economic Mobility through SNAP E&T Community Partnerships – How Community Colleges and Community Action Agencies can partner up",
+    sessionPresenter:"NCAP & The Association of Community College Trustees",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
@@ -152,8 +152,8 @@ var session3Track3 = {
     sessionTimeEnd: dayTimer.session3EndTime,
     dTs:'Session3Track3',
     dayTitle: dayTitle,
-    sessionName:"How Community Colleges and CAAs can partner up",
-    sessionPresenter:"Steph Smith (NCAP)",
+    sessionName:"Moving from Fundraising to Philanthropy",
+    sessionPresenter:"Regina Pinney",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){

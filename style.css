@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
 }
-.container .countdownBox{
+.container .countdownBox, .lmsTile{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +24,7 @@
     margin-right: auto;
     width: 600px;
 }
-.container .countdownBox h2{
+.container .countdownBox h2, .lmsTile{
     text-align: center;
     font-size: 1.25em;
     color: #fff !important;
@@ -106,13 +106,15 @@
 }
 .container .countdownBox .dayTitle{
     font-weight: 600;
+    font-size: 1.2em;
 }
 .container .countdownBox .sessionTitle{
     font-style: oblique;
-    font-size: 1.7em;
+    font-size: 1.4em;
 }
 .container .countdownBox .sessionSpeaker{
-    font-size: 1em;
+    font-size: .9em;
+    font-style: oblique;
 }
 .container .countdownBox .beginText{
     font-size: .8em;
@@ -161,6 +163,29 @@
     transform: scale(1.15);
     transform-origin: bottom;
     transition: ease 250ms;
+}
+.lmsTile{
+    position: relative;
+    width: 100%;
+    height: 420px;
+    background:var(--McaBlue);
+    display: flex;
+    align-items: center;
+}
+.lmsTile .openTitle h2{
+    font-size: 1.2em;
+    padding-bottom: 5px;
+}
+.lmsTile .currentTimeBlock h3{
+    font-size: .7em;
+    padding-bottom: 6px;
+}
+.lmsTile .timer{
+    padding-bottom: 10px;
+}
+.lmsTile .instruction h4{
+    font-size: .6em;
+    line-height: 1em;
 }
 @media(max-width:600px){
     .container{
