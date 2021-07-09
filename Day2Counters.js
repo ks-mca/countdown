@@ -21,7 +21,9 @@ var dayTimer = {
     session4EndTime:new Date("August 11, 2021 15:15:00").getTime(),
     s4StopTimer:0
 }
-const dayTitle = "MCA Virtual Summer Conference Day 2"
+const dayTitle = "";
+const sessionTitle ="This Breakout Session";
+const presenter = "";
 //-------------Day 2 Sessions-------------------------------------------
 //------------Opening Speaker-------------------------------------------
 var Session1Opening = {
@@ -29,9 +31,9 @@ var Session1Opening = {
     sessionTimeEnd: dayTimer.session1EndTime,
     dTs:'Session1',
     dayTitle: dayTitle,
-    sessionName:"Keynote Speach",
-    sessionPresenter:"Donna Beegle",
-    zoomLink: 'http://www.mcaaa.org', //must include the http:// or https:// in order to work
+    sessionName:"Keynote Presentation",
+    sessionPresenter: presenter,
+    zoomLink: 'https://zoom.us/j/96324184740?pwd=b08wbFVrcG5pTFp0dVRMSkxHOERSdz09', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
@@ -50,9 +52,9 @@ var session2Track1 = {
     sessionTimeEnd: dayTimer.session2EndTime,
     dTs:'Session2Track1',
     dayTitle: dayTitle,
-    sessionName:"Leveraging Data Locally",
-    sessionPresenter:"Paige Teegarden",
-    zoomLink: '#', //must include the http:// or https:// in order to work
+    sessionName: sessionTitle,
+    sessionPresenter: presenter,
+    zoomLink: 'https://zoom.us/j/99916577552?pwd=RCtyRm5WdCtvSytqc1pEaDVvUE5wQT09', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
@@ -71,9 +73,9 @@ var session2Track2 = {
     sessionTimeEnd: dayTimer.session2EndTime,
     dTs:'Session2Track2',
     dayTitle: dayTitle,
-    sessionName:"Session Name here",
-    sessionPresenter:"Donna Beegle",
-    zoomLink: '#', //must include the http:// or https:// in order to work
+    sessionName: sessionTitle,
+    sessionPresenter: presenter,
+    zoomLink: 'https://zoom.us/j/91613831018?pwd=bmRzeTAxWDlWK2dvK2VReGFNRlhqdz09', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
@@ -92,9 +94,9 @@ var session2Track3 = {
     sessionTimeEnd: dayTimer.session2EndTime,
     dTs:'Session2Track3',
     dayTitle: dayTitle,
-    sessionName:"Session Name here",
-    sessionPresenter:"Presenter Name here",
-    zoomLink: '#', //must include the http:// or https:// in order to work
+    sessionName: sessionTitle,
+    sessionPresenter: presenter,
+    zoomLink: 'https://zoom.us/j/92936848621?pwd=Q1hCVzZaVUptUGtvU2dWdUhKSndHUT09', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
@@ -113,9 +115,9 @@ var session3Track1 = {
     sessionTimeEnd: dayTimer.session3EndTime,
     dTs:'Session3Track1',
     dayTitle: dayTitle,
-    sessionName:"Session Name here",
-    sessionPresenter:"Presenter Name here",
-    zoomLink: '#', //must include the http:// or https:// in order to work
+    sessionName: sessionTitle,
+    sessionPresenter: presenter,
+    zoomLink: 'https://zoom.us/j/96251539603?pwd=L3RXNG45NDEzVHJ2YmNMbkRkWk14Zz09', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
@@ -134,9 +136,9 @@ var session3Track2 = {
     sessionTimeEnd: dayTimer.session3EndTime,
     dTs:'Session3Track2',
     dayTitle: dayTitle,
-    sessionName:"Session Name here",
-    sessionPresenter:"Donna Beegle",
-    zoomLink: '#', //must include the http:// or https:// in order to work
+    sessionName: sessionTitle,
+    sessionPresenter: presenter,
+    zoomLink: 'https://zoom.us/j/95827483623?pwd=MWd0QXlnZHIxN2JkQ3BycWdzUDFIQT09', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
@@ -155,9 +157,9 @@ var session3Track3 = {
     sessionTimeEnd: dayTimer.session3EndTime,
     dTs:'Session3Track3',
     dayTitle: dayTitle,
-    sessionName:"Session Name here",
-    sessionPresenter:"Presenter Name here",
-    zoomLink: '#', //must include the http:// or https:// in order to work
+    sessionName: sessionTitle,
+    sessionPresenter: presenter,
+    zoomLink: 'https://zoom.us/j/91776177130?pwd=a3lBWXYrWWxrUkU5bitOVjBZWjQ4UT09', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
@@ -170,6 +172,8 @@ var session3Track3 = {
 session3Track3.setTags();
 sessionToFill(session3Track3);
 //-------------------------------------------------------------------------
+
+/*
 //---------------- Session 4--------------------------------------
 var session4 = {
     sessionTimeStart: dayTimer.session4StartTime,
@@ -191,6 +195,7 @@ var session4 = {
 session4.setTags();
 sessionToFill(session4);
 //-------------------------------------------------------------------------
+*/
 
 //Set the intervals for each session to update
 setInterval(function(){
@@ -209,6 +214,9 @@ setInterval(function(){
     updateCountdowns(currentTime,session3Track1), 1000;
     updateCountdowns(currentTime,session3Track2), 1000;
     updateCountdowns(currentTime,session3Track3), 1000;
+    
+    /*
     //Session 4
     updateCountdowns(currentTime,session4), 1000;
+    */
 })
