@@ -47,7 +47,7 @@ var session2Track1 = {
     sessionTimeEnd: dayTimer.session2EndTime,
     dTs:'Session2Track1',
     dayTitle: dayTitle,
-    sessionName:"The Presentation",
+    sessionName:"The Session",
     sessionPresenter:"",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
@@ -68,7 +68,7 @@ var session2Track2 = {
     sessionTimeEnd: dayTimer.session2EndTime,
     dTs:'Session2Track2',
     dayTitle: dayTitle,
-    sessionName:"The Presentation",
+    sessionName:"The Session",
     sessionPresenter:"",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
@@ -89,7 +89,7 @@ var session2Track3 = {
     sessionTimeEnd: dayTimer.session2EndTime,
     dTs:'Session2Track3',
     dayTitle: dayTitle,
-    sessionName:"The Presentation",
+    sessionName:"The Session",
     sessionPresenter:"",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
@@ -110,7 +110,7 @@ var session3Track1 = {
     sessionTimeEnd: dayTimer.session3EndTime,
     dTs:'Session3Track1',
     dayTitle: dayTitle,
-    sessionName:"The Presentation",
+    sessionName:"The Session",
     sessionPresenter:"",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
@@ -131,7 +131,7 @@ var session3Track2 = {
     sessionTimeEnd: dayTimer.session3EndTime,
     dTs:'Session3Track2',
     dayTitle: dayTitle,
-    sessionName:"The Presentation",
+    sessionName:"The Session",
     sessionPresenter:"",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
@@ -152,7 +152,7 @@ var session3Track3 = {
     sessionTimeEnd: dayTimer.session3EndTime,
     dTs:'Session3Track3',
     dayTitle: dayTitle,
-    sessionName:"The Presentation",
+    sessionName:"The Session",
     sessionPresenter:"",
     zoomLink: '#', //must include the http:// or https:// in order to work
     stopTimer:0,
