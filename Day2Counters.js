@@ -47,6 +47,7 @@ Session1Opening.setTags();
 sessionToFill(Session1Opening);
 //-------------------------------------------------------------------------
 //---------------- Session 2 Track 1 --------------------------------------
+//Tools and Techniques for Effective CAA Board Leadership; CAPLAW
 var session2Track1 = {
     sessionTimeStart: dayTimer.session2StartTime,
     sessionTimeEnd: dayTimer.session2EndTime,
@@ -68,6 +69,7 @@ session2Track1.setTags();
 sessionToFill(session2Track1);
 //-------------------------------------------------------------------------
 //---------------- Session 2 Track 2 --------------------------------------
+//Communicating and Relating More Effectively Across Poverty Barriers: Part 1; Dr. Donna M. Beegle
 var session2Track2 = {
     sessionTimeStart: dayTimer.session2StartTime,
     sessionTimeEnd: dayTimer.session2EndTime,
@@ -89,6 +91,7 @@ session2Track2.setTags();
 sessionToFill(session2Track2);
 //-------------------------------------------------------------------------
 //---------------- Session 2 Track 3 --------------------------------------
+//Employee Communications 101: Creating a Positive Workplace Culture; Katena Cain, PhD. Nonprofit Network
 var session2Track3 = {
     sessionTimeStart: dayTimer.session2StartTime,
     sessionTimeEnd: dayTimer.session2EndTime,
@@ -110,6 +113,7 @@ session2Track3.setTags();
 sessionToFill(session2Track3);
 //-------------------------------------------------------------------------
 //---------------- Session 3 Track 1 --------------------------------------
+//Maximizing Success: CAA Personnel Policies and Practices Post-Pandemic; CAPLAW
 var session3Track1 = {
     sessionTimeStart: dayTimer.session3StartTime,
     sessionTimeEnd: dayTimer.session3EndTime,
@@ -131,6 +135,7 @@ session3Track1.setTags();
 sessionToFill(session3Track1);
 //-------------------------------------------------------------------------
 //---------------- Session 3 Track 2 --------------------------------------
+//Communicating and Relating More Effectively Across Poverty Barriers: Part 2; Dr. Donna M. Beegle
 var session3Track2 = {
     sessionTimeStart: dayTimer.session3StartTime,
     sessionTimeEnd: dayTimer.session3EndTime,
@@ -138,7 +143,7 @@ var session3Track2 = {
     dayTitle: dayTitle,
     sessionName: sessionTitle,
     sessionPresenter: presenter,
-    zoomLink: 'https://zoom.us/j/95827483623?pwd=MWd0QXlnZHIxN2JkQ3BycWdzUDFIQT09', //must include the http:// or https:// in order to work
+    zoomLink: 'https://zoom.us/j/91613831018?pwd=bmRzeTAxWDlWK2dvK2VReGFNRlhqdz09', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
@@ -152,6 +157,7 @@ session3Track2.setTags();
 sessionToFill(session3Track2);
 //-------------------------------------------------------------------------
 //---------------- Session 3 Track 3 --------------------------------------
+//ROMA Principles of Data Evaluation and Analysis for Boards; Barbara Mooney and Carey Gibson
 var session3Track3 = {
     sessionTimeStart: dayTimer.session3StartTime,
     sessionTimeEnd: dayTimer.session3EndTime,

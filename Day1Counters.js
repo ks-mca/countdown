@@ -46,6 +46,7 @@ Session1Opening.setTags();
 sessionToFill(Session1Opening);
 //-------------------------------------------------------------------------
 //---------------- Session 2 Track 1 --------------------------------------
+//Building Immigrant Inclusion to Local Anti-Poverty and Economic Opportunity Work; Global Detroit
 var session2Track1 = {
     sessionTimeStart: dayTimer.session2StartTime,
     sessionTimeEnd: dayTimer.session2EndTime,
@@ -67,6 +68,7 @@ session2Track1.setTags();
 sessionToFill(session2Track1);
 //-------------------------------------------------------------------------
 //---------------- Session 2 Track 2 --------------------------------------
+//Living and Leading Boldly in Your 100-Year Life; Barbara Pagano
 var session2Track2 = {
     sessionTimeStart: dayTimer.session2StartTime,
     sessionTimeEnd: dayTimer.session2EndTime,
@@ -88,6 +90,7 @@ session2Track2.setTags();
 sessionToFill(session2Track2);
 //-------------------------------------------------------------------------
 //---------------- Session 2 Track 3 --------------------------------------
+//Cybersecurity Playbook in Action; Ryan Peasly (Wipfli) and Brad Michaud (OLHSA)
 var session2Track3 = {
     sessionTimeStart: dayTimer.session2StartTime,
     sessionTimeEnd: dayTimer.session2EndTime,
@@ -109,6 +112,7 @@ session2Track3.setTags();
 sessionToFill(session2Track3);
 //-------------------------------------------------------------------------
 //---------------- Session 3 Track 1 --------------------------------------
+//Moving from Fundraising to Philanthropy; Regina Pinney, ED, Nonprofit Network
 var session3Track1 = {
     sessionTimeStart: dayTimer.session3StartTime,
     sessionTimeEnd: dayTimer.session3EndTime,
@@ -130,6 +134,7 @@ session3Track1.setTags();
 sessionToFill(session3Track1);
 //-------------------------------------------------------------------------
 //---------------- Session 3 Track 2 --------------------------------------
+//Creating Fair Districts; Jim Masters
 var session3Track2 = {
     sessionTimeStart: dayTimer.session3StartTime,
     sessionTimeEnd: dayTimer.session3EndTime,
@@ -151,6 +156,7 @@ session3Track2.setTags();
 sessionToFill(session3Track2);
 //-------------------------------------------------------------------------
 //---------------- Session 3 Track 3 --------------------------------------
+//Economic Mobility through SNAP E&T Community Partnerships – How Community Colleges and Community Action Agencies can partner up; Steph Smith NCAP
 var session3Track3 = {
     sessionTimeStart: dayTimer.session3StartTime,
     sessionTimeEnd: dayTimer.session3EndTime,

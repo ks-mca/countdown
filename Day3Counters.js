@@ -46,6 +46,7 @@ Session1Opening.setTags();
 sessionToFill(Session1Opening);
 //-------------------------------------------------------------------------
 //---------------- Session 2 Track 1 --------------------------------------
+//Leveraging Data Locally: Utilizing data and data visualizations to empower community action work; Paige Teegarden
 var session2Track1 = {
     sessionTimeStart: dayTimer.session2StartTime,
     sessionTimeEnd: dayTimer.session2EndTime,
@@ -67,6 +68,7 @@ session2Track1.setTags();
 sessionToFill(session2Track1);
 //-------------------------------------------------------------------------
 //---------------- Session 2 Track 2 --------------------------------------
+//Quality Improvement 101; Ashley Mosier
 var session2Track2 = {
     sessionTimeStart: dayTimer.session2StartTime,
     sessionTimeEnd: dayTimer.session2EndTime,
@@ -88,6 +90,7 @@ session2Track2.setTags();
 sessionToFill(session2Track2);
 //-------------------------------------------------------------------------
 //---------------- Session 2 Track 3 --------------------------------------
+//Change, Crisis Management and Tending to Self; Katena Cain, PhD., Nonprofit Network
 var session2Track3 = {
     sessionTimeStart: dayTimer.session2StartTime,
     sessionTimeEnd: dayTimer.session2EndTime,
@@ -109,6 +112,7 @@ session2Track3.setTags();
 sessionToFill(session2Track3);
 //-------------------------------------------------------------------------
 //---------------- Session 3 Track 1 --------------------------------------
+//How to Raise Hell and Raise Money, Too; Alan Jennings
 var session3Track1 = {
     sessionTimeStart: dayTimer.session3StartTime,
     sessionTimeEnd: dayTimer.session3EndTime,
@@ -130,6 +134,7 @@ session3Track1.setTags();
 sessionToFill(session3Track1);
 //-------------------------------------------------------------------------
 //---------------- Session 3 Track 2 --------------------------------------
+//Quality Improvement 201; Ashley Mosier
 var session3Track2 = {
     sessionTimeStart: dayTimer.session3StartTime,
     sessionTimeEnd: dayTimer.session3EndTime,
@@ -137,7 +142,7 @@ var session3Track2 = {
     dayTitle: dayTitle,
     sessionName: sessionTitle,
     sessionPresenter: presenter,
-    zoomLink: 'https://zoom.us/j/96071677962?pwd=dVpJckIyUmJJM3YrS2FKSFJWL2hnUT09', //must include the http:// or https:// in order to work
+    zoomLink: 'https://zoom.us/j/92486248499?pwd=bngzYlQyN0VkbFRaSllYbTYvNVZodz09', //must include the http:// or https:// in order to work
     stopTimer:0,
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
@@ -151,6 +156,7 @@ session3Track2.setTags();
 sessionToFill(session3Track2);
 //-------------------------------------------------------------------------
 //---------------- Session 3 Track 3 --------------------------------------
+//Hiring Revolution; Trina Olson, Team Dynamics
 var session3Track3 = {
     sessionTimeStart: dayTimer.session3StartTime,
     sessionTimeEnd: dayTimer.session3EndTime,
