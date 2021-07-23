@@ -157,7 +157,7 @@ session3Track2.setTags();
 sessionToFill(session3Track2);
 //-------------------------------------------------------------------------
 //---------------- Session 3 Track 3 --------------------------------------
-//ROMA Principles of Data Evaluation and Analysis for Boards; Barbara Mooney and Carey Gibson
+//ROMA Principles of Data Analysis for Boards; Barbara Mooney and Carey Gibson
 var session3Track3 = {
     sessionTimeStart: dayTimer.session3StartTime,
     sessionTimeEnd: dayTimer.session3EndTime,
