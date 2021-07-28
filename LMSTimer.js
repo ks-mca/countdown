@@ -6,6 +6,10 @@ Provide the Session information need to populate the LMSTimer.html page.
 */
 
 HideField('.JSNote'); //hide the enable javascript message
+
+const dayTitle = "";
+const sessionTitle ="This Breakout Session";
+const presenter = "";
 //---------------------Day 1-------------------------------------------
 var day1Timer = {
     session1StartTime: new Date("August 10, 2021 11:00:00").getTime(),
@@ -48,8 +52,8 @@ var day3Timer = {
 //------------------------------------------------------------------------
 //------------Opening Speaker-------------------------------------------
 var Session1Opening = {
-    sessionTimeStart: dayTimer.session1StartTime,
-    sessionTimeEnd: dayTimer.session1EndTime,
+    sessionTimeStart: day1Timer.session1StartTime,
+    sessionTimeEnd: day1Timer.session1EndTime,
     dTs: 'Session1',
     dayTitle: dayTitle,
     sessionName: "Keynote Speach",
@@ -66,4 +70,14 @@ var Session1Opening = {
     }
 }
 Session1Opening.setTags();
+LMSToFill(Session1Opening);
 //-------------------------------------------------------------------------
+//Set the intervals for each session to update
+setInterval(function(){
+    var currentTime = new Date().getTime();
+    //var newTime = adjustedTime(currentTime, 0, 0, 0); //for testing
+    //currentTime = newTime; //for testing
+
+    //Opening Speaker
+    updateLMSCountdowns(currentTime,Session1Opening), 1000;
+})

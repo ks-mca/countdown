@@ -4,31 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Document</title>
     <link rel="stylesheet" href="bannerStyles.css">
+    <script type="text/javascript" src="countdownConstants.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="JSNote">
+        <h2>Javascript must be enabled in order to view page</h2>
+    </div>
+
+    <div id="template"></div>
+        
     <div class="main-banner" id="main-banner">
         <div id="imgbanbtn-prev" class="imgbanbtn imgbanbtn-prev">
 
         </div>
         <div id="imgban3" class="imgban">
             <div class="imgban-box">
-                <a href="http://mcac.mclms.net" target="_blank">
+                <a href="http://mcac.mclms.net" target="_blank" id="imgban-box1-link">
                     <button>More Info...</button>
                 </a>
             </div>
         </div>
         <div id="imgban2" class="imgban">
             <div class="imgban-box">
-                <a href="http://mcac.mclms.net" target="_blank">
+                <a href="http://mcac.mclms.net" target="_blank" id="imgban-box2-link">
                     <button>More info...</button>
                 </a>
             </div>
         </div>
         <div id="imgban1" class="imgban">
             <div class="imgban-box">
-                <a href="http://mcac.mclms.net" target="_blank">
+                <a href="http://mcac.mclms.net" target="_blank" id="imgban-box3-link">
                     <button>More info...</button>
                 </a>
             </div>
@@ -37,6 +46,8 @@
             
         </div>
     </div>
+
+    <script type="text/javascript" src="LMSTimer.js"></script>
     
     <script>
         var bannerStatus = 1;
