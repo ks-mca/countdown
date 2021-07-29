@@ -10,18 +10,7 @@ HideField('.JSNote'); //hide the enable javascript message
 const dayTitle = "";
 const sessionTitle ="This Breakout Session";
 const presenter = "";
-//---------------------Day 1-------------------------------------------
-var day1Timer = {
-    session1StartTime: new Date("August 10, 2021 11:00:00").getTime(),
-    session1EndTime: new Date("August 10, 2021 11:45:00").getTime(),
-    s1StopTimer: 0,
-    session2StartTime: new Date("August 10, 2021 12:15:00").getTime(),
-    session2EndTime: new Date("August 10, 2021 13:15:00").getTime(),
-    s2StopTimer: 0,
-    session3StartTime: new Date("August 10, 2021 13:30:00").getTime(),
-    session3EndTime: new Date("August 10, 2021 14:30:00").getTime(),
-    s3StopTimer: 0
-}
+
 //---------------------Day 2-------------------------------------------
 var day2Timer = {
     session1StartTime: new Date("August 11, 2021 11:00:00").getTime(),
@@ -49,43 +38,98 @@ var day3Timer = {
     session3EndTime: new Date("August 12, 2021 14:30:00").getTime(),
     s3StopTimer: 0,
 }
-//------------------------------------------------------------------------
-//------------Opening Speaker-------------------------------------------
-var KeynoteSpeach = {
-    sessionTimeStart: day1Timer.session1StartTime,
-    sessionTimeEnd: day1Timer.session1EndTime,
-    dTs: 'Keynote',
-    dayTitle: dayTitle,
-    sessionName: "Welcome to the 2021 MCA Virtual Conference",
-    sessionPresenter: "Join us for a Keynote Speach from Dr. Mona Hanna-Attisha",
-    zoomLink: 'http://www.mcaaa.org', //must include the http:// or https:// in order to work
-    stopTimer: 0,
-    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/183843",
-    setTags() {
-        this.countdownTag = this.dTs + 'Countdown';
-        this.msgTag = this.dTs + 'CountMsg';
-        this.dayId = this.dTs + 'day';
-        this.hourId = this.dTs + 'hour';
-        this.minuteId = this.dTs + 'minute';
-        this.secondsId = this.dTs + 'second';
+
+var now;
+var timerToUse;
+
+//-------------------------------------------------------------------------
+//Fill the banner images
+fillStopKey=false;
+fillStop1=false;
+fillStop2=false;
+fillStopTrivia=false;
+
+function fillBanners(){
+    // console.log(now);
+    // console.log(fillStopTrivia);
+    // console.log(now<B2Timer.sessionTimeEnd);
+    // console.log(now>B1Timer.sessionTimeEnd);
+    if((now>B1Timer.sessionTimeEnd)&&(fillStop2==false)){
+        setBannerImage(B1S1.dTs,B1S1.bannerImgUrl,B1S1.LMSLink);
+        setBannerImage(B1S2.dTs,B1S2.bannerImgUrl,B1S2.LMSLink);
+        setBannerImage(B1S3.dTs,B1S3.bannerImgUrl,B1S3.LMSLink);
+        startLoop();
+        fillStop2=true;
+        fillStop1=false;
+        fillStopKey=false;
+        fillStopTrivia=false;
+        LMSToFill(B2Timer);
+        timerToUse = B2Timer;
+    }
+    else if((now<B1Timer.sessionTimeEnd)&&(now>adjustedTime(TriviaTimer.sessionTimeEnd,0,0,-7))&&(fillStop1==false)){
+        setBannerImage(B2S1.dTs,B2S1.bannerImgUrl,B2S1.LMSLink);
+        setBannerImage(B2S2.dTs,B2S2.bannerImgUrl,B2S2.LMSLink);
+        setBannerImage(B2S3.dTs,B2S3.bannerImgUrl,B2S3.LMSLink);
+        startLoop();
+        fillStop2=false;
+        fillStop1=true;
+        fillStopKey=false;
+        fillStopTrivia=false;
+        LMSToFill(B1Timer);
+        timerToUse = B1Timer;
+    }
+    else if((now<adjustedTime(TriviaTimer.sessionTimeEnd,0,0,-7))&&(now>adjustedTime(KeynoteSpeach.sessionTimeEnd,0,0,2))&&(fillStopTrivia==false)){
+        setBannerImage(TriviaTimer.dTs,TriviaTimer.bannerImgUrl,TriviaTimer.LMSLink);
+        stopLoop();
+        fillStop2=false;
+        fillStop1=false;
+        fillStopKey=false;
+        fillStopTrivia=true;
+        LMSToFill(TriviaTimer);
+        timerToUse = TriviaTimer;
+    }
+    else if((now<adjustedTime(KeynoteSpeach.sessionTimeEnd,0,0,2))&&(fillStopKey==false)){
+        setBannerImage(KeynoteSpeach.dTs,KeynoteSpeach.bannerImgUrl,KeynoteSpeach.LMSLink);
+        stopLoop();
+        fillStop2=false;
+        fillStop1=false;
+        fillStopKey=true;
+        fillStopTrivia=false;
+        LMSToFill(KeynoteSpeach);
+        timerToUse = KeynoteSpeach;
     }
 }
-KeynoteSpeach.setTags();
 
-//-------------------------------------------------------------------------
-//Set the intervals for each session banner to update
-
-LMSToFill(KeynoteSpeach);
-//-------------------------------------------------------------------------
-//Set the intervals for each session to update
-setInterval(function(){
-    var currentTime = new Date().getTime();
-    //var newTime = adjustedTime(currentTime, 0, 0, 0); //for testing
-    //currentTime = newTime; //for testing
-
-    //Opening Speaker
-    updateLMSCountdowns(currentTime,KeynoteSpeach), 1000;
-})
+function setBannerImage(sesType, imgUrl, link){
+    if((sesType=="Keynote")||(sesType=="Trivia")){
+        document.querySelector('#imgban1').style.backgroundImage='url('+imgUrl+')';
+        document.querySelector('#imgban-box1-link').setAttribute("href",link);
+        document.querySelector('#imgbanbtn-next').style.display='none';
+        document.querySelector('#imgbanbtn-prev').style.display='none';
+        window.onload=function(){
+            bannerLoop();
+        }
+        banType("Keynote");
+    }
+    else if(sesType=="Session1"){
+        document.querySelector('#imgban1').style.backgroundImage='url('+imgUrl+')';
+        document.querySelector('#imgban-box1-link').setAttribute("href",link);
+    }
+    else if(sesType=="Session2"){
+        document.querySelector('#imgban2').style.backgroundImage='url('+imgUrl+')';
+        document.querySelector('#imgban-box2-link').setAttribute("href",link);
+    }
+    else if(sesType=="Session3"){
+        var imgToUse = document.querySelector('#imgban3').style.backgroundImage='url('+imgUrl+')';
+        document.querySelector('#imgban-box3-link').setAttribute("href",link);
+        document.querySelector('#imgbanbtn-prev').style.display='block';
+        document.querySelector('#imgbanbtn-next').style.display='block';
+        window.onload=function(){
+            bannerLoop();
+        }
+        banType("Multi");
+    }
+}
 
 //-------------------------------------------------------------------------
 //Set the banner functions
@@ -225,3 +269,115 @@ var bannerType;
             bannerStatus = 1;
         }
     }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//-------------------------------------------------------LMS Counter Functions-----------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//assign session values to pass to HTML template
+function LMSToFill (sessionToSetup){
+    LMS_FillPage(sessionToSetup.msgTag, sessionToSetup.dayTitle, sessionToSetup.sessionName, sessionToSetup.sessionPresenter, sessionToSetup.countdownTag, sessionToSetup.dayId, sessionToSetup.hourId, sessionToSetup.minuteId, sessionToSetup.secondsId, sessionToSetup.bannerImgUrl, sessionToSetup.dTs);
+}
+
+//set Html Templates for countdown clocks
+function LMS_FillPage (h2Tag, dayTitle, sessionTitle, sessionSpeaker, counterTag, dayTag, hourTag, minuteTag, secondsTag, imgUrl, dTs){
+    var temp = document.querySelector('#template');
+    temp.innerHTML=
+        "<div class='container sessionCountdown'>"+
+            "<div class='countdownBox'>"+
+                "<div id="+h2Tag+">"+
+                    "<h2 class='dayTitle'>"+dayTitle+"</h2>"+
+                    "<h2 class='sessionTitle'>"+sessionTitle+"</h2>"+
+                    "<h2 class='sessionSpeaker'>"+sessionSpeaker+"</h2>"+
+                "</div>"+
+                "<div id="+counterTag+" class='countdown'>"+
+                "<div id="+dayTag+" class='day'></div>"+
+                "<div id="+hourTag+" class='hour'></div>"+
+                "<div id="+minuteTag+" class='minute'></div>"+
+                "<div id="+secondsTag+"  class='second'></div>"+
+            "</div>"+
+        "</div>";
+}
+function updateLMSCountdowns(time, session){
+    if((adjustedTime(time, 0, 0, 5)>=session.sessionTimeStart)&&(adjustedTime(time, 0, 0, -5)<session.sessionTimeEnd)){//Enable the link 5 minutes before start time and keep up for 5 minutes after the end time
+        if(session.stopTimer==0){//Display the link with a countdown to start
+            if(session.dTs=="Keynote"){
+                LMSInProgress(session.countdownTag, session.msgTag, session.zoomLink, PresentationButton, "presentation", "soon");
+            }
+            else if(session.dTs=="Trivia"){
+                LMSInProgress(session.countdownTag, session.msgTag, session.zoomLink, JoinButton, "Trivia Game", "soon");
+            }
+            session.stopTimer=1;
+        }
+        else if((session.stopTimer==1)&&(time>session.sessionTimeStart)){//Display the link with a countdown to end
+            if(session.dTs=="Keynote"){
+                LMSInProgress(session.countdownTag, session.msgTag, session.zoomLink, PresentationButton, "presentation", "inProgress");
+            }
+            else if(session.dTs=="Trivia"){
+                LMSInProgress(session.countdownTag, session.msgTag, session.zoomLink, JoinButton, "Trivia Game", "inProgress");
+            }
+            else {
+                LMSInProgress(session.countdownTag, session.msgTag, session.zoomLink, JoinButton, "trainings", "inProgress");
+            }
+            session.stopTimer=2;
+        }
+        else if ((session.stopTimer==2)&&(time>session.sessionTimeEnd)){//Display the link but hide the countdown
+            if(session.dTs=="Keynote"){
+                LMSInProgress(session.countdownTag, session.msgTag, session.zoomLink, PresentationButton, "presentation", "hide");
+            } else if(session.dTs=="Trivia"){
+                LMSInProgress(session.countdownTag, session.msgTag, session.zoomLink, JoinButton, "Trivia Game", "hide");
+            }
+            else {
+                LMSInProgress(session.countdownTag, session.msgTag, session.zoomLink, JoinButton, "trainings", "hide");
+            }
+            session.stopTimer=3;
+        }
+    }
+    else if((adjustedTime(time, 0, 0, -5)>session.sessionTimeEnd)&&(session.stopTimer<4)){//Display the ended message only
+        LMSEnded(session.countdownTag, session.msgTag);
+        session.stopTimer=4;
+    }
+    if(session.stopTimer<2){//Countdown to the start time
+    document.querySelector("#"+session.dayId).innerText = endDay(session.sessionTimeStart, time);
+    document.querySelector("#"+session.hourId).innerText = endHour(session.sessionTimeStart, time);
+    document.querySelector("#"+session.minuteId).innerText = endMinute(session.sessionTimeStart, time);
+    document.querySelector("#"+session.secondsId).innerText = endSecond(session.sessionTimeStart, time);
+    }
+    else if(session.stopTimer==2){//Countdown to the end time
+    document.querySelector("#"+session.dayId).innerText = endDay(session.sessionTimeEnd, time);
+    document.querySelector("#"+session.hourId).innerText = endHour(session.sessionTimeEnd, time);
+    document.querySelector("#"+session.minuteId).innerText = endMinute(session.sessionTimeEnd, time);
+    document.querySelector("#"+session.secondsId).innerText = endSecond(session.sessionTimeEnd, time);
+    }
+}
+function LMSEnded(timerTag, msgDisplayTag){//Session ended message
+    HideField("#"+timerTag);
+    document.querySelector("#"+msgDisplayTag).innerHTML = 
+        "<h2>The live sessions have ended<br><br>The replays should be available soon<br>We hope you have enjoyed the content<br><br>Remember to fill out your evaluations</h2>";
+}
+
+function LMSInProgress(timerTag, msgDisplayTag, sessionLink, buttonToUse, sessionType, displayCounter){//Session in progress messages
+    if(sessionType=="presentation"){
+    document.querySelector("#"+msgDisplayTag).innerHTML = 
+        "<h3 class='introMsg'>Live "+sessionType+" in Progress</h3>"+
+        "<a class='sessionLink' href='" +sessionLink+ "' target='_blank'>"+
+            "<img style='display: block; margin-left: auto; margin-right: auto;' src='"+buttonToUse+"' alt='Join' width='420' height='117'/>"+
+        "</a>";
+    }
+    else{
+        document.querySelector("#"+msgDisplayTag).innerHTML = 
+        "<h3 class='introMsg'>Live "+sessionType+" in Progress</h3>";
+    }
+    
+    if(displayCounter=="hide"){//Session is almost over. Displayed for x mins after session end time
+        HideField("#"+timerTag);
+        HideField("#"+msgDisplayTag+" .introMsg");
+        document.querySelector("#"+msgDisplayTag).innerHTML += "<h4>The "+sessionType+" will end soon</h4>";
+    }
+    else if(displayCounter=="soon"){//Session is about to begin. Displayed for x minutes before session start time
+        HideField("#"+msgDisplayTag+" .introMsg");
+        document.querySelector("#"+msgDisplayTag).innerHTML += "<h4>The "+sessionType+" will begin in:</h4>";
+    }
+    else{//Session in progress
+        document.querySelector("#"+msgDisplayTag).innerHTML += "<h4>The "+sessionType+" will conclude in:</h4>";
+    }
+}
