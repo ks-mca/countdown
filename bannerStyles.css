@@ -5,6 +5,23 @@
 body{
     background-color: #f3f3f3;
 }
+.JSNote{
+    text-transform: uppercase;
+}
+.JSNote h1{
+    color: #8cc641;
+    text-align: center;
+    padding-top: 2em;
+    font-size: 2em;
+}
+.JSNote p{
+    color: #8cc641;
+    text-align: center;
+}
+.JSNote p strong{
+    font-size: larger;
+}
+
 .main-banner{
     margin: 0 auto;
     width: 80em;
@@ -24,19 +41,16 @@ body{
     -o-transition: all ease-in-out 500ms;
 }
 .main-banner #imgban3{
-    background-image: url("Session%20Small%20Image%20(Pagano).png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 .main-banner #imgban2{
-    background-image: url("Session%20Small%20Image%20(Peasley_Michaud).png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 .main-banner #imgban1{
-    background-image: url("Session%20Small%20Image%20(Smith_Brown_Miranda).png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
