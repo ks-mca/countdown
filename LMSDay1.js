@@ -31,7 +31,7 @@ var KeynoteSpeach = {
     dTs: 'Keynote',
     dayTitle: dayTitle,
     sessionName: "Welcome to the 2021 MCA Virtual Conference",
-    sessionPresenter: "Join us for a Keynote Speach from Dr. Mona Hanna-Attisha",
+    sessionPresenter: "Join us for a Keynote Speach by:<br>Dr. Mona Hanna-Attisha",
     zoomLink: 'https://zoom.us/j/96474286801?pwd=SGt1bnVVRkorZ3JFTDZySFZSU25QUT09', //must include the http:// or https:// in order to work
     stopTimer: 0,
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/183843",
