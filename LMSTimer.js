@@ -50,10 +50,7 @@ fillStop2=false;
 fillStopTrivia=false;
 
 function fillBanners(){
-    // console.log(now);
-    // console.log(fillStopTrivia);
-    // console.log(now<B2Timer.sessionTimeEnd);
-    // console.log(now>B1Timer.sessionTimeEnd);
+
     if((now>B1Timer.sessionTimeEnd)&&(fillStop2==false)){
         setBannerImage(B1S1.dTs,B1S1.bannerImgUrl,B1S1.LMSLink);
         setBannerImage(B1S2.dTs,B1S2.bannerImgUrl,B1S2.LMSLink);
@@ -145,7 +142,6 @@ var bannerType;
     }
     function banType(BanType){
         bannerType=BanType;
-        console.log(bannerType);
     }
     document.getElementById("main-banner").onmouseenter = function(){
         stopLoop();
