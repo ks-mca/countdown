@@ -172,7 +172,7 @@ var B2S3 ={
 setInterval(function(){
     var currentTime = new Date().getTime();
     
-    var newTime = adjustedTime(currentTime, 11, 19, 0-20+6-1+20); //for testing
+    var newTime = adjustedTime(currentTime, 0, 0, 0); //for testing
     currentTime = newTime; //for testing
     now = currentTime;
 
