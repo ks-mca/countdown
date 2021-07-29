@@ -143,13 +143,64 @@ function adjustedTime(now, dayAdjust, hourAdjust, minuteAdjust){//Adjust the cur
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //assign session values to pass to HTML template
 function LMSToFill (sessionToSetup){
-    LMS_FillPage(sessionToSetup.msgTag, sessionToSetup.dayTitle, sessionToSetup.sessionName, sessionToSetup.sessionPresenter, sessionToSetup.countdownTag, sessionToSetup.dayId, sessionToSetup.hourId, sessionToSetup.minuteId, sessionToSetup.secondsId);
+    LMS_FillPage(sessionToSetup.msgTag, sessionToSetup.dayTitle, sessionToSetup.sessionName, sessionToSetup.sessionPresenter, sessionToSetup.countdownTag, sessionToSetup.dayId, sessionToSetup.hourId, sessionToSetup.minuteId, sessionToSetup.secondsId, sessionToSetup.bannerImgUrl, sessionToSetup.dTs);
 }
 
 //set Html Templates for countdown clocks
-function LMS_FillPage (h2Tag, dayTitle, sessionTitle, sessionSpeaker, counterTag, dayTag, hourTag, minuteTag, secondsTag){
+function LMS_FillPage (h2Tag, dayTitle, sessionTitle, sessionSpeaker, counterTag, dayTag, hourTag, minuteTag, secondsTag, imgUrl, dTs){
     var temp = document.querySelector('#template');
-    temp.innerHTML+="<div class='container sessionCountdown'><div class='countdownBox'><div id="+h2Tag+"><h2 class='dayTitle'>"+dayTitle+"</h2><h2 class='sessionTitle'>"+sessionTitle+"</h2><h2 class='sessionSpeaker'>"+sessionSpeaker+"</h2><h2 class='beginText'>Will Begin In:</h2></div><div id="+counterTag+" class='countdown'><div id="+dayTag+" class='day'></div><div id="+hourTag+" class='hour'></div><div id="+minuteTag+" class='minute'></div><div id="+secondsTag+"  class='second'></div></div></div>";
+    temp.innerHTML+=
+        "<div class='container sessionCountdown'>"+
+            "<div class='countdownBox'>"+
+                "<div id="+h2Tag+">"+
+                    "<h2 class='dayTitle'>"+dayTitle+"</h2>"+
+                    "<h2 class='sessionTitle'>"+sessionTitle+"</h2>"+
+                    "<h2 class='sessionSpeaker'>"+sessionSpeaker+"</h2>"+
+                "</div>"+
+                "<div id="+counterTag+" class='countdown'>"+
+                "<div id="+dayTag+" class='day'></div>"+
+                "<div id="+hourTag+" class='hour'></div>"+
+                "<div id="+minuteTag+" class='minute'></div>"+
+                "<div id="+secondsTag+"  class='second'></div>"+
+            "</div>"+
+        "</div>";
+    if(dTs=="Keynote"){
+        var imgToUse = document.querySelector('#imgban1').style.backgroundImage='url('+imgUrl+')';
+        document.querySelector('#imgbanbtn-next').style.display='none';
+        document.querySelector('#imgbanbtn-prev').style.display='none';
+        window.onload=function(){
+            bannerLoop();
+        }
+        banType("Keynote");
+    }
+    else if(dTs=="Session1"){
+        var imgToUse = document.querySelector('#imgban1').style.backgroundImage='url('+imgUrl+')';
+        document.querySelector('#imgbanbtn-prev').style.display='block';
+        document.querySelector('#imgbanbtn-next').style.display='block';
+        window.onload=function(){
+            bannerLoop();
+        }
+        banType("Multi");
+    }
+    else if(dTs=="Session2"){
+        var imgToUse = document.querySelector('#imgban2').style.backgroundImage='url('+imgUrl+')';
+        document.querySelector('#imgbanbtn-prev').style.display='block';
+        document.querySelector('#imgbanbtn-next').style.display='block';
+        window.onload=function(){
+            bannerLoop();
+        }
+        banType("Multi");
+    }
+    else if(dTs=="Session3"){
+        var imgToUse = document.querySelector('#imgban3').style.backgroundImage='url('+imgUrl+')';
+        document.querySelector('#imgbanbtn-prev').style.display='block';
+        document.querySelector('#imgbanbtn-next').style.display='block';
+        window.onload=function(){
+            bannerLoop();
+        }
+        banType("Multi");
+    }
+
 }
 function updateLMSCountdowns(time, session){
     if((adjustedTime(time, 0, 0, 5)>=session.sessionTimeStart)&&(adjustedTime(time, 0, 0, -5)<session.sessionTimeEnd)){//Enable the link 5 minutes before start time and keep up for 5 minutes after the end time
@@ -200,11 +251,16 @@ function updateLMSCountdowns(time, session){
 }
 function LMSEnded(timerTag, msgDisplayTag){//Session ended message
     HideField("#"+timerTag);
-    document.querySelector("#"+msgDisplayTag).innerHTML = "<h2>Live session has ended<br>The replay should be available soon</h2>";
+    document.querySelector("#"+msgDisplayTag).innerHTML = 
+        "<h2>Live session has ended<br>The replay should be available soon</h2>";
 }
 
 function LMSInProgress(timerTag, msgDisplayTag, sessionLink, buttonToUse, sessionType, displayCounter){//Session in progress messages
-    document.querySelector("#"+msgDisplayTag).innerHTML = "<h3 class='introMsg'>Live "+sessionType+" in Progress</h3><a class='sessionLink' href='" +sessionLink+ "' target='_blank'><img style='display: block; margin-left: auto; margin-right: auto;' src='"+buttonToUse+"' alt='Join' width='420' height='117'/></a>";
+    document.querySelector("#"+msgDisplayTag).innerHTML = 
+        "<h3 class='introMsg'>Live "+sessionType+" in Progress</h3>"+
+        "<a class='sessionLink' href='" +sessionLink+ "' target='_blank'>"+
+            "<img style='display: block; margin-left: auto; margin-right: auto;' src='"+buttonToUse+"' alt='Join' width='420' height='117'/>"+
+        "</a>";
     
     if(displayCounter=="hide"){//Session is almost over. Displayed for x mins after session end time
         HideField("#"+timerTag);
