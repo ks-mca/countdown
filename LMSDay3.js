@@ -30,7 +30,7 @@ var KeynoteSpeach = {
     sessionTimeEnd: dayTimer.session1EndTime,
     dTs: 'Keynote',
     dayTitle: dayTitle,
-    sessionName: "Welcome to Day 2 of the 2021 MCA Virtual Conference",
+    sessionName: "Welcome to the final day of the 2021 MCA Virtual Conference",
     sessionPresenter: "Join us for a Keynote Speach by:<br>Patrick Cooney",
     zoomLink: 'https://zoom.us/j/91709164260?pwd=SHBrRFk4RkQxVXRFYlhUbE8vd3pLdz09', //must include the http:// or https:// in order to work
     stopTimer: 0,
