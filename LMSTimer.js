@@ -11,34 +11,6 @@ const dayTitle = "";
 const sessionTitle ="This Breakout Session";
 const presenter = "";
 
-//---------------------Day 2-------------------------------------------
-var day2Timer = {
-    session1StartTime: new Date("August 11, 2021 11:00:00").getTime(),
-    session1EndTime: new Date("August 11, 2021 11:45:00").getTime(),
-    s1StopTimer: 0,
-    session2StartTime: new Date("August 11, 2021 12:15:00").getTime(),
-    session2EndTime: new Date("August 11, 2021 13:15:00").getTime(),
-    s2StopTimer: 0,
-    session3StartTime: new Date("August 11, 2021 13:30:00").getTime(),
-    session3EndTime: new Date("August 11, 2021 14:30:00").getTime(),
-    s3StopTimer: 0,
-    session4StartTime: new Date("August 11, 2021 14:45:00").getTime(),
-    session4EndTime: new Date("August 11, 2021 15:15:00").getTime(),
-    s4StopTimer: 0
-}
-//---------------------Day 3-------------------------------------------
-var day3Timer = {
-    session1StartTime: new Date("August 12, 2021 11:00:00").getTime(),
-    session1EndTime: new Date("August 12, 2021 11:45:00").getTime(),
-    s1StopTimer: 0,
-    session2StartTime: new Date("August 12, 2021 12:15:00").getTime(),
-    session2EndTime: new Date("August 12, 2021 13:15:00").getTime(),
-    s2StopTimer: 0,
-    session3StartTime: new Date("August 12, 2021 13:30:00").getTime(),
-    session3EndTime: new Date("August 12, 2021 14:30:00").getTime(),
-    s3StopTimer: 0,
-}
-
 var now;
 var timerToUse;
 
@@ -52,9 +24,9 @@ fillStopTrivia=false;
 function fillBanners(){
 
     if((now>B1Timer.sessionTimeEnd)&&(fillStop2==false)){
-        setBannerImage(B1S1.dTs,B1S1.bannerImgUrl,B1S1.LMSLink);
-        setBannerImage(B1S2.dTs,B1S2.bannerImgUrl,B1S2.LMSLink);
-        setBannerImage(B1S3.dTs,B1S3.bannerImgUrl,B1S3.LMSLink);
+        setBannerImage(B2S2.dTs,B2S2.bannerImgUrl,B2S2.LMSLink);
+        setBannerImage(B2S1.dTs,B2S1.bannerImgUrl,B2S1.LMSLink);
+        setBannerImage(B2S3.dTs,B2S3.bannerImgUrl,B2S3.LMSLink);
         startLoop();
         fillStop2=true;
         fillStop1=false;
@@ -64,9 +36,9 @@ function fillBanners(){
         timerToUse = B2Timer;
     }
     else if((now<B1Timer.sessionTimeEnd)&&(now>adjustedTime(TriviaTimer.sessionTimeEnd,0,0,-7))&&(fillStop1==false)){
-        setBannerImage(B2S1.dTs,B2S1.bannerImgUrl,B2S1.LMSLink);
-        setBannerImage(B2S2.dTs,B2S2.bannerImgUrl,B2S2.LMSLink);
-        setBannerImage(B2S3.dTs,B2S3.bannerImgUrl,B2S3.LMSLink);
+        setBannerImage(B1S1.dTs,B1S1.bannerImgUrl,B1S1.LMSLink);
+        setBannerImage(B1S2.dTs,B1S2.bannerImgUrl,B1S2.LMSLink);
+        setBannerImage(B1S3.dTs,B1S3.bannerImgUrl,B1S3.LMSLink);
         startLoop();
         fillStop2=false;
         fillStop1=true;
@@ -111,13 +83,15 @@ function setBannerImage(sesType, imgUrl, link){
     else if(sesType=="Session1"){
         document.querySelector('#imgban1').style.backgroundImage='url('+imgUrl+')';
         document.querySelector('#imgban-box1-link').setAttribute("href",link);
+        banType("Multi");
     }
     else if(sesType=="Session2"){
         document.querySelector('#imgban2').style.backgroundImage='url('+imgUrl+')';
         document.querySelector('#imgban-box2-link').setAttribute("href",link);
+        banType("Multi");
     }
     else if(sesType=="Session3"){
-        var imgToUse = document.querySelector('#imgban3').style.backgroundImage='url('+imgUrl+')';
+        document.querySelector('#imgban3').style.backgroundImage='url('+imgUrl+')';
         document.querySelector('#imgban-box3-link').setAttribute("href",link);
         document.querySelector('#imgbanbtn-prev').style.display='block';
         document.querySelector('#imgbanbtn-next').style.display='block';
@@ -177,9 +151,9 @@ var bannerType;
             setTimeout(() => {
                 document.getElementById("imgban1").style.right = "0em";
                 document.getElementById("imgban1").style.zIndex = "1000";
-                document.getElementById("imgban2").style.right = "-80em";
+                document.getElementById("imgban2").style.right = "-73em";
                 document.getElementById("imgban2").style.zIndex = "1500";
-                document.getElementById("imgban3").style.right = "80em";
+                document.getElementById("imgban3").style.right = "73em";
                 document.getElementById("imgban3").style.zIndex = "500";  
             }, 500);
             setTimeout(() => {
@@ -192,9 +166,9 @@ var bannerType;
             setTimeout(() => {
                 document.getElementById("imgban2").style.right = "0em";
                 document.getElementById("imgban2").style.zIndex = "1000";
-                document.getElementById("imgban3").style.right = "-80em";
+                document.getElementById("imgban3").style.right = "-73em";
                 document.getElementById("imgban3").style.zIndex = "1500";
-                document.getElementById("imgban1").style.right = "80em";
+                document.getElementById("imgban1").style.right = "73em";
                 document.getElementById("imgban1").style.zIndex = "500";  
             }, 500);
             setTimeout(() => {
@@ -207,9 +181,9 @@ var bannerType;
             setTimeout(() => {
                 document.getElementById("imgban3").style.right = "0em";
                 document.getElementById("imgban3").style.zIndex = "1000";
-                document.getElementById("imgban1").style.right = "-80em";
+                document.getElementById("imgban1").style.right = "-73em";
                 document.getElementById("imgban1").style.zIndex = "1500";
-                document.getElementById("imgban2").style.right = "80em";
+                document.getElementById("imgban2").style.right = "73em";
                 document.getElementById("imgban2").style.zIndex = "500";  
             }, 500);
             setTimeout(() => {
@@ -224,9 +198,9 @@ var bannerType;
             setTimeout(() => {
                 document.getElementById("imgban1").style.right = "0em";
                 document.getElementById("imgban1").style.zIndex = "1000";
-                document.getElementById("imgban3").style.right = "80em";
+                document.getElementById("imgban3").style.right = "73em";
                 document.getElementById("imgban3").style.zIndex = "1500";
-                document.getElementById("imgban2").style.right = "-80em";
+                document.getElementById("imgban2").style.right = "-73em";
                 document.getElementById("imgban2").style.zIndex = "500";  
             }, 500);
             setTimeout(() => {
@@ -239,9 +213,9 @@ var bannerType;
             setTimeout(() => {
                 document.getElementById("imgban2").style.right = "0em";
                 document.getElementById("imgban2").style.zIndex = "1000";
-                document.getElementById("imgban1").style.right = "80em";
+                document.getElementById("imgban1").style.right = "73em";
                 document.getElementById("imgban1").style.zIndex = "1500";
-                document.getElementById("imgban3").style.right = "-80em";
+                document.getElementById("imgban3").style.right = "-73em";
                 document.getElementById("imgban3").style.zIndex = "500";  
             }, 500);
             setTimeout(() => {
@@ -254,9 +228,9 @@ var bannerType;
             setTimeout(() => {
                 document.getElementById("imgban3").style.right = "0em";
                 document.getElementById("imgban3").style.zIndex = "1000";
-                document.getElementById("imgban2").style.right = "80em";
+                document.getElementById("imgban2").style.right = "73em";
                 document.getElementById("imgban2").style.zIndex = "1500";
-                document.getElementById("imgban1").style.right = "-80em";
+                document.getElementById("imgban1").style.right = "-73em";
                 document.getElementById("imgban1").style.zIndex = "500";  
             }, 500);
             setTimeout(() => {

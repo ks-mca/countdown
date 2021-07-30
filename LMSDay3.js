@@ -1,4 +1,4 @@
-/*/////////////////////////////////////////////////////////////////////////////////////////
+/*============================================================================================
 /Code writen for MCA Virtual Conference 2021
 /Author: Keith Schafer
 /
@@ -8,19 +8,19 @@
 /Content is changed based on the timers so that the banners are current and timers are as well
 /for every section of the training schedule.
 /
-/////////////////////////////////////////////////////////////////////////////////////////*/
+=============================================================================================*/
 
-//---------------------Day 1-------------------------------------------
+//---------------------Day 3-------------------------------------------------
 var dayTimer = {
-    session1StartTime: new Date("August 10, 2021 11:00:00").getTime(),
-    session1EndTime: new Date("August 10, 2021 11:45:00").getTime(),
+    session1StartTime: new Date("August 12, 2021 11:00:00").getTime(),
+    session1EndTime: new Date("August 12, 2021 11:45:00").getTime(),
     s1StopTimer: 0,
-    session2StartTime: new Date("August 10, 2021 12:15:00").getTime(),
-    session2EndTime: new Date("August 10, 2021 13:15:00").getTime(),
+    session2StartTime: new Date("August 12, 2021 12:15:00").getTime(),
+    session2EndTime: new Date("August 12, 2021 13:15:00").getTime(),
     s2StopTimer: 0,
-    session3StartTime: new Date("August 10, 2021 13:30:00").getTime(),
-    session3EndTime: new Date("August 10, 2021 14:30:00").getTime(),
-    s3StopTimer: 0
+    session3StartTime: new Date("August 12, 2021 13:30:00").getTime(),
+    session3EndTime: new Date("August 12, 2021 14:30:00").getTime(),
+    s3StopTimer: 0,
 }
 
 //----------------------------------------------------------------------------
@@ -30,12 +30,12 @@ var KeynoteSpeach = {
     sessionTimeEnd: dayTimer.session1EndTime,
     dTs: 'Keynote',
     dayTitle: dayTitle,
-    sessionName: "Welcome to the 2021 MCA Virtual Conference",
-    sessionPresenter: "Join us for a Keynote Speach by:<br>Dr. Mona Hanna-Attisha",
-    zoomLink: 'https://zoom.us/j/96474286801?pwd=SGt1bnVVRkorZ3JFTDZySFZSU25QUT09', //must include the http:// or https:// in order to work
+    sessionName: "Welcome to Day 2 of the 2021 MCA Virtual Conference",
+    sessionPresenter: "Join us for a Keynote Speach by:<br>Patrick Cooney",
+    zoomLink: 'https://zoom.us/j/91709164260?pwd=SHBrRFk4RkQxVXRFYlhUbE8vd3pLdz09', //must include the http:// or https:// in order to work
     stopTimer: 0,
-    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/183843",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50120/view",
+    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184166",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12696/lesson/50173/view",
     setTags() {
         this.countdownTag = this.dTs + 'Countdown';
         this.msgTag = this.dTs + 'CountMsg';
@@ -47,8 +47,8 @@ var KeynoteSpeach = {
 }
 KeynoteSpeach.setTags();
 
-//------------------------------------------------------------------------
-//------------Trivia Timer-------------------------------------------
+//-----------------------------------------------------------------------
+//------------Trivia Timer-----------------------------------------------
 var TriviaTimer = {
     sessionTimeStart: dayTimer.session1EndTime,
     sessionTimeEnd: dayTimer.session2StartTime,
@@ -71,7 +71,7 @@ var TriviaTimer = {
 }
 TriviaTimer.setTags();
 
-//------------------------------------------------------------------------
+//-----------------------------------------------------------------------
 //------------Breakout 1 Timer-------------------------------------------
 var B1Timer = {
     sessionTimeStart: dayTimer.session2StartTime,
@@ -79,7 +79,7 @@ var B1Timer = {
     dTs: 'Session1',
     dayTitle: dayTitle,
     sessionName: "We hope you enjoyed our keynote",
-    sessionPresenter: "Join us in one of our great breakout sessions",
+    sessionPresenter: "We have more great breakout sessions to come",
     zoomLink: 'https://mcac.mclms.net/en/', //must include the http:// or https:// in order to work
     stopTimer: 0,
     setTags() {
@@ -93,7 +93,7 @@ var B1Timer = {
 }
 B1Timer.setTags();
 
-//------------------------------------------------------------------------
+//-----------------------------------------------------------------------
 //------------Breakout 2 Timer-------------------------------------------
 var B2Timer = {
     sessionTimeStart: dayTimer.session3StartTime,
@@ -101,7 +101,7 @@ var B2Timer = {
     dTs: 'Session2',
     dayTitle: dayTitle,
     sessionName: "We hope you have enjoyed the sessions so far",
-    sessionPresenter: "We have more great content yet to come today",
+    sessionPresenter: "There is still great content yet to come",
     zoomLink: 'https://mcac.mclms.net/en/', //must include the http:// or https:// in order to work
     stopTimer: 0,
     setTags() {
@@ -115,58 +115,58 @@ var B2Timer = {
 }
 B2Timer.setTags();
 
-//-----------------------------------------------------------------------
+//---------------------------------------------------------------------------
 //------------Breakout 1 Session 1-------------------------------------------
 var B1S1 ={
-    sesTitle:" Building Immigrant Inclusion to Local Anti-Poverty and Economic Opportunity Work; Fayrouz Saad, Global Michigan and Steve Tobocman, Global Detroit",
-    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/183911",
+    sesTitle:"Leveraging Data Locally: Utilizing data and data visualizations to empower community action work; Paige Teegarden, EmpowOR by CSST",
+    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184167",
     dTs:"Session1",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50121/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12696/lesson/50174/view",
 }
 
-//-----------------------------------------------------------------------
+//---------------------------------------------------------------------------
 //------------Breakout 1 Session 2-------------------------------------------
 var B1S2 ={
-    sesTitle:"Living and Leading Boldly in Your 100-Year Life; Barbara Pagano",
-    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/183919",
+    sesTitle:"Quality Improvement 101; Ashley Mosier, Jefferson Franklin Community Action Corporation",
+    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184168",
     dTs:"Session2",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50122/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12696/lesson/50175/view",
 }
 
-//-----------------------------------------------------------------------
+//---------------------------------------------------------------------------
 //------------Breakout 1 Session 3-------------------------------------------
 var B1S3 ={
-    sesTitle:"Cybersecurity Playbook in Action; Ryan Peasly, Wipfli and Brad Michaud, OLHSA",
-    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/183920",
+    sesTitle:"Change, Crisis Management and Tending to Self; Katena Cain, PhD, Nonprofit Network",
+    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184170",
     dTs:"Session3",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50124/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12696/lesson/50176/view",
 }
 
-//-----------------------------------------------------------------------
+//---------------------------------------------------------------------------
 //------------Breakout 2 Session 1-------------------------------------------
 var B2S1 ={
-    sesTitle:"Moving from Fundraising to Philanthropy; Regina Pinney, ED, Nonprofit Network",
-    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/183973",
+    sesTitle:"How to Raise Hell and Raise Money, Too; Alan Jennings",
+    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184172",
     dTs:"Session1",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50126/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12696/lesson/50177/view",
 }
 
-//-----------------------------------------------------------------------
+//---------------------------------------------------------------------------
 //------------Breakout 2 Session 2-------------------------------------------
 var B2S2 ={
-    sesTitle:"Creating Fair Districts; Jim Masters, CCAP, NCRT",
-    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/183974",
+    sesTitle:"Quality Improvement 201; Ashley Mosier, Jefferson Franklin Community Action Corporation",
+    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184169",
     dTs:"Session2",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50127/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12696/lesson/50178/view",
 }
 
-//-----------------------------------------------------------------------
+//---------------------------------------------------------------------------
 //------------Breakout 2 Session 3-------------------------------------------
 var B2S3 ={
-    sesTitle:"Economic Mobility through SNAP E&T Community Partnerships – How Community Colleges and Community Action Agencies can partner up; Steph Smith NCAP, Katie Brown and José Miranda, ACCT",
-    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/183975",
+    sesTitle:"Hiring Revolution; Trina Olson, Team Dynamics",
+    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184173",
     dTs:"Session3",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50129/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12696/lesson/50179/view",
 }
 
 setInterval(function(){
