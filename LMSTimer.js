@@ -24,8 +24,8 @@ fillStopTrivia=false;
 function fillBanners(){
 
     if((now>=B1Timer.sessionTimeEnd)&&(fillStop2==false)){
-        setBannerImage(B2S2.dTs,B2S2.bannerImgUrl,B2S2.LMSLink);
         setBannerImage(B2S1.dTs,B2S1.bannerImgUrl,B2S1.LMSLink);
+        setBannerImage(B2S2.dTs,B2S2.bannerImgUrl,B2S2.LMSLink);
         setBannerImage(B2S3.dTs,B2S3.bannerImgUrl,B2S3.LMSLink);
         fillStop2=true;
         fillStop1=false;
@@ -33,6 +33,7 @@ function fillBanners(){
         fillStopTrivia=false;
         timerToUse = B2Timer;
         LMSToFill(B2Timer);
+        stopLoop();
         startLoop();
     }
     else if((now<B1Timer.sessionTimeEnd)&&(now>adjustedTime(TriviaTimer.sessionTimeEnd,0,0,-7))&&(fillStop1==false)){
@@ -45,6 +46,7 @@ function fillBanners(){
         fillStopTrivia=false;
         timerToUse = B1Timer;
         LMSToFill(B1Timer);
+        stopLoop();
         startLoop();
     }
     else if((now<adjustedTime(TriviaTimer.sessionTimeEnd,0,0,-7))&&(now>adjustedTime(KeynoteSpeach.sessionTimeEnd,0,0,2))&&(fillStopTrivia==false)){
