@@ -58,7 +58,7 @@ var TriviaTimer = {
     sessionPresenter: "Join us for some fun trivia while you enjoy your lunch",
     zoomLink: 'https://mcac.mclms.net/en/', //must include the http:// or https:// in order to work
     stopTimer: 0,
-    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/183843",
+    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184227",
     LMSLink: KeynoteSpeach.zoomLink,
     setTags() {
         this.countdownTag = this.dTs + 'Countdown';
