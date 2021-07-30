@@ -23,49 +23,49 @@ fillStopTrivia=false;
 
 function fillBanners(){
 
-    if((now>B1Timer.sessionTimeEnd)&&(fillStop2==false)){
+    if((now>=B1Timer.sessionTimeEnd)&&(fillStop2==false)){
         setBannerImage(B2S2.dTs,B2S2.bannerImgUrl,B2S2.LMSLink);
         setBannerImage(B2S1.dTs,B2S1.bannerImgUrl,B2S1.LMSLink);
         setBannerImage(B2S3.dTs,B2S3.bannerImgUrl,B2S3.LMSLink);
-        startLoop();
         fillStop2=true;
         fillStop1=false;
         fillStopKey=false;
         fillStopTrivia=false;
-        LMSToFill(B2Timer);
         timerToUse = B2Timer;
+        LMSToFill(B2Timer);
+        startLoop();
     }
     else if((now<B1Timer.sessionTimeEnd)&&(now>adjustedTime(TriviaTimer.sessionTimeEnd,0,0,-7))&&(fillStop1==false)){
         setBannerImage(B1S1.dTs,B1S1.bannerImgUrl,B1S1.LMSLink);
         setBannerImage(B1S2.dTs,B1S2.bannerImgUrl,B1S2.LMSLink);
         setBannerImage(B1S3.dTs,B1S3.bannerImgUrl,B1S3.LMSLink);
-        startLoop();
         fillStop2=false;
         fillStop1=true;
         fillStopKey=false;
         fillStopTrivia=false;
-        LMSToFill(B1Timer);
         timerToUse = B1Timer;
+        LMSToFill(B1Timer);
+        startLoop();
     }
     else if((now<adjustedTime(TriviaTimer.sessionTimeEnd,0,0,-7))&&(now>adjustedTime(KeynoteSpeach.sessionTimeEnd,0,0,2))&&(fillStopTrivia==false)){
         setBannerImage(TriviaTimer.dTs,TriviaTimer.bannerImgUrl,TriviaTimer.LMSLink);
-        stopLoop();
         fillStop2=false;
         fillStop1=false;
         fillStopKey=false;
         fillStopTrivia=true;
-        LMSToFill(TriviaTimer);
         timerToUse = TriviaTimer;
-    }
-    else if((now<adjustedTime(KeynoteSpeach.sessionTimeEnd,0,0,2))&&(fillStopKey==false)){
-        setBannerImage(KeynoteSpeach.dTs,KeynoteSpeach.bannerImgUrl,KeynoteSpeach.LMSLink);
+        LMSToFill(TriviaTimer);
         stopLoop();
+    }
+    else if((now<=adjustedTime(KeynoteSpeach.sessionTimeEnd,0,0,2))&&(fillStopKey==false)){
+        setBannerImage(KeynoteSpeach.dTs,KeynoteSpeach.bannerImgUrl,KeynoteSpeach.LMSLink);
         fillStop2=false;
         fillStop1=false;
         fillStopKey=true;
         fillStopTrivia=false;
-        LMSToFill(KeynoteSpeach);
         timerToUse = KeynoteSpeach;
+        LMSToFill(KeynoteSpeach);
+        stopLoop();
     }
 }
 
@@ -75,9 +75,9 @@ function setBannerImage(sesType, imgUrl, link){
         document.querySelector('#imgban-box1-link').setAttribute("href",link);
         document.querySelector('#imgbanbtn-next').style.display='none';
         document.querySelector('#imgbanbtn-prev').style.display='none';
-        window.onload=function(){
-            bannerLoop();
-        }
+        // window.onload=function(){
+        //     bannerLoop();
+        // }
         banType("Keynote");
     }
     else if(sesType=="Session1"){
@@ -95,9 +95,9 @@ function setBannerImage(sesType, imgUrl, link){
         document.querySelector('#imgban-box3-link').setAttribute("href",link);
         document.querySelector('#imgbanbtn-prev').style.display='block';
         document.querySelector('#imgbanbtn-next').style.display='block';
-        window.onload=function(){
-            bannerLoop();
-        }
+        // window.onload=function(){
+        //     bannerLoop();
+        // }
         banType("Multi");
     }
 }
@@ -151,9 +151,9 @@ var bannerType;
             setTimeout(() => {
                 document.getElementById("imgban1").style.right = "0em";
                 document.getElementById("imgban1").style.zIndex = "1000";
-                document.getElementById("imgban2").style.right = "-73em";
+                document.getElementById("imgban2").style.right = "-75em";
                 document.getElementById("imgban2").style.zIndex = "1500";
-                document.getElementById("imgban3").style.right = "73em";
+                document.getElementById("imgban3").style.right = "75em";
                 document.getElementById("imgban3").style.zIndex = "500";  
             }, 500);
             setTimeout(() => {
@@ -166,9 +166,9 @@ var bannerType;
             setTimeout(() => {
                 document.getElementById("imgban2").style.right = "0em";
                 document.getElementById("imgban2").style.zIndex = "1000";
-                document.getElementById("imgban3").style.right = "-73em";
+                document.getElementById("imgban3").style.right = "-75em";
                 document.getElementById("imgban3").style.zIndex = "1500";
-                document.getElementById("imgban1").style.right = "73em";
+                document.getElementById("imgban1").style.right = "75em";
                 document.getElementById("imgban1").style.zIndex = "500";  
             }, 500);
             setTimeout(() => {
@@ -181,9 +181,9 @@ var bannerType;
             setTimeout(() => {
                 document.getElementById("imgban3").style.right = "0em";
                 document.getElementById("imgban3").style.zIndex = "1000";
-                document.getElementById("imgban1").style.right = "-73em";
+                document.getElementById("imgban1").style.right = "-75em";
                 document.getElementById("imgban1").style.zIndex = "1500";
-                document.getElementById("imgban2").style.right = "73em";
+                document.getElementById("imgban2").style.right = "75em";
                 document.getElementById("imgban2").style.zIndex = "500";  
             }, 500);
             setTimeout(() => {
@@ -198,9 +198,9 @@ var bannerType;
             setTimeout(() => {
                 document.getElementById("imgban1").style.right = "0em";
                 document.getElementById("imgban1").style.zIndex = "1000";
-                document.getElementById("imgban3").style.right = "73em";
+                document.getElementById("imgban3").style.right = "75em";
                 document.getElementById("imgban3").style.zIndex = "1500";
-                document.getElementById("imgban2").style.right = "-73em";
+                document.getElementById("imgban2").style.right = "-75em";
                 document.getElementById("imgban2").style.zIndex = "500";  
             }, 500);
             setTimeout(() => {
@@ -213,9 +213,9 @@ var bannerType;
             setTimeout(() => {
                 document.getElementById("imgban2").style.right = "0em";
                 document.getElementById("imgban2").style.zIndex = "1000";
-                document.getElementById("imgban1").style.right = "73em";
+                document.getElementById("imgban1").style.right = "75em";
                 document.getElementById("imgban1").style.zIndex = "1500";
-                document.getElementById("imgban3").style.right = "-73em";
+                document.getElementById("imgban3").style.right = "-75em";
                 document.getElementById("imgban3").style.zIndex = "500";  
             }, 500);
             setTimeout(() => {
@@ -228,9 +228,9 @@ var bannerType;
             setTimeout(() => {
                 document.getElementById("imgban3").style.right = "0em";
                 document.getElementById("imgban3").style.zIndex = "1000";
-                document.getElementById("imgban2").style.right = "73em";
+                document.getElementById("imgban2").style.right = "75em";
                 document.getElementById("imgban2").style.zIndex = "1500";
-                document.getElementById("imgban1").style.right = "-73em";
+                document.getElementById("imgban1").style.right = "-75em";
                 document.getElementById("imgban1").style.zIndex = "500";  
             }, 500);
             setTimeout(() => {
