@@ -72,6 +72,30 @@ var TriviaTimer = {
 TriviaTimer.setTags();
 
 //------------------------------------------------------------------------
+//------------15 min Trivia Timer-------------------------------------------
+var Trivia15Timer = {
+    sessionTimeStart: dayTimer.session2EndTime,
+    sessionTimeEnd: dayTimer.session3StartTime,
+    dTs: 'Trivia',
+    dayTitle: dayTitle,
+    sessionName: "We hope you enjoyed the session",
+    sessionPresenter: "Join us for some fun trivia while you enjoy your lunch",
+    zoomLink: 'https://mcac.mclms.net/en/', //must include the http:// or https:// in order to work
+    stopTimer: 0,
+    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184227",
+    LMSLink: 'https://zoom.us/j/99664485666?pwd=U1ZzSmlzWFJpelM1MUxHMXFpdnljQT09',
+    setTags() {
+        this.countdownTag = this.dTs + 'Countdown';
+        this.msgTag = this.dTs + 'CountMsg';
+        this.dayId = this.dTs + 'day';
+        this.hourId = this.dTs + 'hour';
+        this.minuteId = this.dTs + 'minute';
+        this.secondsId = this.dTs + 'second';
+    }
+}
+Trivia15Timer.setTags();
+
+//------------------------------------------------------------------------
 //------------Breakout 1 Timer-------------------------------------------
 var B1Timer = {
     sessionTimeStart: dayTimer.session2StartTime,
@@ -79,7 +103,7 @@ var B1Timer = {
     dTs: 'Session1',
     dayTitle: dayTitle,
     sessionName: "We hope you enjoyed our keynote",
-    sessionPresenter: "Join us in one of our great breakout sessions",
+    sessionPresenter: "Join us in one of our great breakout sessions<br>Session start in:",
     zoomLink: 'https://mcac.mclms.net/en/', //must include the http:// or https:// in order to work
     stopTimer: 0,
     setTags() {
@@ -101,7 +125,7 @@ var B2Timer = {
     dTs: 'Session2',
     dayTitle: dayTitle,
     sessionName: "We hope you have enjoyed the sessions so far",
-    sessionPresenter: "We have more great content yet to come",
+    sessionPresenter: "We have more great content yet to come<br>Sessions start in:",
     zoomLink: 'https://mcac.mclms.net/en/', //must include the http:// or https:// in order to work
     stopTimer: 0,
     setTags() {

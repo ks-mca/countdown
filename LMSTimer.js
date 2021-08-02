@@ -20,10 +20,11 @@ fillStopKey=false;
 fillStop1=false;
 fillStop2=false;
 fillStopTrivia=false;
+fillStopTrivia15=false;
 
 function fillBanners(){
 
-    if((now>=B1Timer.sessionTimeEnd)&&(fillStop2==false)){
+    if((now>=adjustedTime(Trivia15Timer.sessionTimeEnd,0,0,-5))&&(fillStop2==false)){
         setBannerImage(B2S1.dTs,B2S1.bannerImgUrl,B2S1.LMSLink);
         setBannerImage(B2S2.dTs,B2S2.bannerImgUrl,B2S2.LMSLink);
         setBannerImage(B2S3.dTs,B2S3.bannerImgUrl,B2S3.LMSLink);
@@ -31,12 +32,24 @@ function fillBanners(){
         fillStop1=false;
         fillStopKey=false;
         fillStopTrivia=false;
+        fillStopTrivia15=false;
         timerToUse = B2Timer;
         LMSToFill(B2Timer);
         stopLoop();
         startLoop();
     }
-    else if((now<B1Timer.sessionTimeEnd)&&(now>adjustedTime(TriviaTimer.sessionTimeEnd,0,0,-7))&&(fillStop1==false)){
+    else if((now<adjustedTime(Trivia15Timer.sessionTimeEnd,0,0,-5))&&(now>adjustedTime(B1Timer.sessionTimeEnd,0,0,1))&&(fillStopTrivia15==false)){
+        setBannerImage(Trivia15Timer.dTs,Trivia15Timer.bannerImgUrl,Trivia15Timer.LMSLink);
+        fillStop2=false;
+        fillStop1=false;
+        fillStopKey=false;
+        fillStopTrivia=false;
+        fillStopTrivia15=true;
+        timerToUse = Trivia15Timer;
+        LMSToFill(Trivia15Timer);
+        stopLoop();
+    }
+    else if((now<adjustedTime(B1Timer.sessionTimeEnd,0,0,1))&&(now>adjustedTime(TriviaTimer.sessionTimeEnd,0,0,-5))&&(fillStop1==false)){
         setBannerImage(B1S1.dTs,B1S1.bannerImgUrl,B1S1.LMSLink);
         setBannerImage(B1S2.dTs,B1S2.bannerImgUrl,B1S2.LMSLink);
         setBannerImage(B1S3.dTs,B1S3.bannerImgUrl,B1S3.LMSLink);
@@ -44,17 +57,19 @@ function fillBanners(){
         fillStop1=true;
         fillStopKey=false;
         fillStopTrivia=false;
+        fillStopTrivia15=false;
         timerToUse = B1Timer;
         LMSToFill(B1Timer);
         stopLoop();
         startLoop();
     }
-    else if((now<adjustedTime(TriviaTimer.sessionTimeEnd,0,0,-7))&&(now>adjustedTime(KeynoteSpeach.sessionTimeEnd,0,0,2))&&(fillStopTrivia==false)){
+    else if((now<adjustedTime(TriviaTimer.sessionTimeEnd,0,0,-5))&&(now>adjustedTime(KeynoteSpeach.sessionTimeEnd,0,0,2))&&(fillStopTrivia==false)){
         setBannerImage(TriviaTimer.dTs,TriviaTimer.bannerImgUrl,TriviaTimer.LMSLink);
         fillStop2=false;
         fillStop1=false;
         fillStopKey=false;
         fillStopTrivia=true;
+        fillStopTrivia15=false;
         timerToUse = TriviaTimer;
         LMSToFill(TriviaTimer);
         stopLoop();
@@ -145,6 +160,12 @@ var bannerType;
         bannerLoopReverse();
     }
     function stopLoop(){
+        if((bannerType=="Keynote")){
+        document.getElementById("main-banner").style.opacity="0";
+        bannerStatus=1;
+        bannerLoop();
+        document.getElementById("main-banner").style.opacity="1";
+        }
         clearInterval(startBannerLoop);
     }
     function bannerLoop(){
@@ -160,7 +181,7 @@ var bannerType;
             }, 500);
             setTimeout(() => {
                 document.getElementById("imgban2").style.opacity = "1";    
-            }, 1000);
+            }, 1100);
             bannerStatus = 2;
         }
         else if (bannerStatus ===2) {
@@ -175,7 +196,7 @@ var bannerType;
             }, 500);
             setTimeout(() => {
                 document.getElementById("imgban3").style.opacity = "1";    
-            }, 1000);
+            }, 1100);
             bannerStatus = 3;
         }
         else if (bannerStatus ===3) {
@@ -190,7 +211,7 @@ var bannerType;
             }, 500);
             setTimeout(() => {
                 document.getElementById("imgban1").style.opacity = "1";    
-            }, 1000);
+            }, 1100);
             bannerStatus = 1;
         }
     }
@@ -207,7 +228,7 @@ var bannerType;
             }, 500);
             setTimeout(() => {
                 document.getElementById("imgban3").style.opacity = "1";    
-            }, 1000);
+            }, 1100);
             bannerStatus = 2;
         }
         else if (bannerStatus ===2) {
@@ -222,7 +243,7 @@ var bannerType;
             }, 500);
             setTimeout(() => {
                 document.getElementById("imgban1").style.opacity = "1";    
-            }, 1000);
+            }, 1100);
             bannerStatus = 3;
         }
         else if (bannerStatus ===3) {
@@ -237,7 +258,7 @@ var bannerType;
             }, 500);
             setTimeout(() => {
                 document.getElementById("imgban2").style.opacity = "1";    
-            }, 1000);
+            }, 1100);
             bannerStatus = 1;
         }
     }
