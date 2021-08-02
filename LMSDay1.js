@@ -136,8 +136,8 @@ var B1S2 ={
 //-----------------------------------------------------------------------
 //------------Breakout 1 Session 3-------------------------------------------
 var B1S3 ={
-    sesTitle:"Cybersecurity Playbook in Action; Ryan Peasly, Wipfli and Brad Michaud, OLHSA",
-    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/183920",
+    sesTitle:"Cybersecurity Playbook in Action; Dan Miller, Wipfli and Brad Michaud, OLHSA",
+    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184487",
     dTs:"Session3",
     LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50124/view",
 }

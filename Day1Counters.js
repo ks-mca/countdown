@@ -90,7 +90,7 @@ session2Track2.setTags();
 sessionToFill(session2Track2);
 //-------------------------------------------------------------------------
 //---------------- Session 2 Track 3 --------------------------------------
-//Cybersecurity Playbook in Action; Ryan Peasly (Wipfli) and Brad Michaud (OLHSA)
+//Cybersecurity Playbook in Action; Dan Miller (Wipfli) and Brad Michaud (OLHSA)
 var session2Track3 = {
     sessionTimeStart: dayTimer.session2StartTime,
     sessionTimeEnd: dayTimer.session2EndTime,
