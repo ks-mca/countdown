@@ -21,6 +21,7 @@ function sessionToFill (sessionToSetup){
 function FillPage (h2Tag, dayTitle, sessionTitle, sessionSpeaker, counterTag, dayTag, hourTag, minuteTag, secondsTag){
     var temp = document.querySelector('#template');
     temp.innerHTML+="<div class='container sessionCountdown'><div class='countdownBox'><div id="+h2Tag+"><h2 class='dayTitle'>"+dayTitle+"</h2><h2 class='sessionTitle'>"+sessionTitle+"</h2><h2 class='sessionSpeaker'>"+sessionSpeaker+"</h2><h2 class='beginText'>Will Begin In:</h2></div><div id="+counterTag+" class='countdown'><div id="+dayTag+" class='day'></div><div id="+hourTag+" class='hour'></div><div id="+minuteTag+" class='minute'></div><div id="+secondsTag+"  class='second'></div></div></div>";
+    temp.style.zIndex=2000;
 }
 
 //-----------------Countdown Calcs----------------------------
