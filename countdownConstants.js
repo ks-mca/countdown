@@ -50,6 +50,7 @@ const JoinButton = 'https://ks-mca.github.io/countdown/JoinButton(green).png';
 const ConversationButton = 'https://ks-mca.github.io/countdown/JoinConversationButton(green).png';
 const PresentationButton = 'https://ks-mca.github.io/countdown/JoinPresentationButton(green).png';
 const EventButton = 'https://ks-mca.github.io/countdown/JoinEventButton(green).png';
+const EvalButton = 'https://ks-mca.github.io/countdown/EvalButton.png';
 
 function updateCountdowns(time, session){
     if((adjustedTime(time, 0, 0, 5)>=session.sessionTimeStart)&&(adjustedTime(time, 0, 0, -5)<session.sessionTimeEnd)){//Enable the link 5 minutes before start time and keep up for 5 minutes after the end time
@@ -91,7 +92,7 @@ function updateCountdowns(time, session){
         }
     }
     else if((adjustedTime(time, 0, 0, -5)>session.sessionTimeEnd)&&(session.stopTimer<4)){//Display the ended message only
-        sessionEnded(session.countdownTag, session.msgTag);
+        sessionEnded(session.countdownTag, session.msgTag, session.surveyLink);
         session.stopTimer=4;
     }
     if(session.stopTimer<2){//Countdown to the start time
@@ -109,9 +110,10 @@ function updateCountdowns(time, session){
 }
 //------------------------------------------------------------------------------------------------------
 
-function sessionEnded(timerTag, msgDisplayTag){//Session ended message
+function sessionEnded(timerTag, msgDisplayTag, evalLink){//Session ended message
     HideField("#"+timerTag);
-    document.querySelector("#"+msgDisplayTag).innerHTML = "<h2>Live session has ended<br>The replay should be available soon</h2>";
+    document.querySelector("#"+msgDisplayTag).innerHTML = "<h2>Live session has ended<br>The replay should be available soon</h2>"+
+    "<a class='sessionLink' href='" +evalLink+ "' target='_blank'><img style='display: block; margin-left: auto; margin-right: auto;' src='"+EvalButton+"' alt='Join' width='420' height='117'/></a>";
 }
 
 function sessionInProgress(timerTag, msgDisplayTag, sessionLink, buttonToUse, sessionType, displayCounter){//Session in progress messages

@@ -35,6 +35,7 @@ var Session1Opening = {
     sessionPresenter: presenter,
     zoomLink: 'https://zoom.us/j/96324184740?pwd=b08wbFVrcG5pTFp0dVRMSkxHOERSdz09', //must include the http:// or https:// in order to work
     stopTimer:0,
+    surveyLink:'https://www.surveymonkey.com/r/K9JBV26',
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
         this.msgTag=this.dTs+'CountMsg';
@@ -57,6 +58,7 @@ var session2Track1 = {
     sessionPresenter: presenter,
     zoomLink: 'https://zoom.us/j/99916577552?pwd=RCtyRm5WdCtvSytqc1pEaDVvUE5wQT09', //must include the http:// or https:// in order to work
     stopTimer:0,
+    surveyLink:'https://www.surveymonkey.com/r/K9MFMGW',
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
         this.msgTag=this.dTs+'CountMsg';
@@ -79,6 +81,7 @@ var session2Track2 = {
     sessionPresenter: presenter,
     zoomLink: 'https://zoom.us/j/91613831018?pwd=bmRzeTAxWDlWK2dvK2VReGFNRlhqdz09', //must include the http:// or https:// in order to work
     stopTimer:0,
+    surveyLink:'https://www.surveymonkey.com/r/K9P9BS6',
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
         this.msgTag=this.dTs+'CountMsg';
@@ -101,6 +104,7 @@ var session2Track3 = {
     sessionPresenter: presenter,
     zoomLink: 'https://zoom.us/j/92936848621?pwd=Q1hCVzZaVUptUGtvU2dWdUhKSndHUT09', //must include the http:// or https:// in order to work
     stopTimer:0,
+    surveyLink:'https://www.surveymonkey.com/r/KD8SQKP',
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
         this.msgTag=this.dTs+'CountMsg';
@@ -123,6 +127,7 @@ var session3Track1 = {
     sessionPresenter: presenter,
     zoomLink: 'https://zoom.us/j/96251539603?pwd=L3RXNG45NDEzVHJ2YmNMbkRkWk14Zz09', //must include the http:// or https:// in order to work
     stopTimer:0,
+    surveyLink:'https://www.surveymonkey.com/r/KD2HVRZ',
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
         this.msgTag=this.dTs+'CountMsg';
@@ -145,6 +150,7 @@ var session3Track2 = {
     sessionPresenter: presenter,
     zoomLink: 'https://zoom.us/j/91613831018?pwd=bmRzeTAxWDlWK2dvK2VReGFNRlhqdz09', //must include the http:// or https:// in order to work
     stopTimer:0,
+    surveyLink:'https://www.surveymonkey.com/r/KDTJS68',
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
         this.msgTag=this.dTs+'CountMsg';
@@ -167,6 +173,7 @@ var session3Track3 = {
     sessionPresenter: presenter,
     zoomLink: 'https://zoom.us/j/91776177130?pwd=a3lBWXYrWWxrUkU5bitOVjBZWjQ4UT09', //must include the http:// or https:// in order to work
     stopTimer:0,
+    surveyLink:'https://www.surveymonkey.com/r/KDBQYZC',
     setTags (){
         this.countdownTag=this.dTs+'Countdown';
         this.msgTag=this.dTs+'CountMsg';
