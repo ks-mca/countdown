@@ -12,7 +12,7 @@
 //------------------------   CLEAResult   -------------------------------
 var sponsor1 ={
     spName:"CLEAResult",
-    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/185391",
+    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/185404",
     LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50121/view",
 }
 
@@ -20,7 +20,7 @@ var sponsor1 ={
 //-------------------------  MAHP   -------------------------------------------
 var sponsor2 ={
     spName:"Michigan Association of Health Plans (MAHP)",
-    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/185392",
+    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/185405",
     LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50122/view",
 }
 
@@ -28,7 +28,7 @@ var sponsor2 ={
 //------------    Mutual of America   ---------------------------------------
 var sponsor3 ={
     spName:"Mutual of America",
-    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/185393",
+    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/185406",
     LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50124/view",
 }
 
@@ -36,7 +36,7 @@ var sponsor3 ={
 //-------------------   PNC   -------------------------------------------
 var sponsor4 ={
     spName:"PNC",
-    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/185394",
+    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/185407",
     LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50126/view",
 }
 
@@ -44,7 +44,7 @@ var sponsor4 ={
 //------------   Blue Cross Complete of Michigan   -------------------------
 var sponsor5 ={
     spName:"Blue Cross Complete of Michigan",
-    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/185395",
+    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/185408",
     LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50127/view",
 }
 
@@ -52,7 +52,7 @@ var sponsor5 ={
 //------------      DNV     ------------------------------------------
 var sponsor6 ={
     spName:"DNV",
-    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/185396",
+    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/185409",
     LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50129/view",
 }
 
