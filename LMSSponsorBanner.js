@@ -20,7 +20,7 @@ var sponsor1 ={
 //-------------------------  MAHP   -------------------------------------------
 var sponsor2 ={
     spName:"Michigan Association of Health Plans (MAHP)",
-    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/185405",
+    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/185417",
     LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50122/view",
 }
 
@@ -36,7 +36,7 @@ var sponsor3 ={
 //-------------------   PNC   -------------------------------------------
 var sponsor4 ={
     spName:"PNC",
-    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/185407",
+    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/185415",
     LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50126/view",
 }
 
@@ -52,7 +52,7 @@ var sponsor5 ={
 //------------      DNV     ------------------------------------------
 var sponsor6 ={
     spName:"DNV",
-    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/185409",
+    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/185416",
     LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50129/view",
 }
 
