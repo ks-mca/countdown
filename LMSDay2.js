@@ -142,8 +142,8 @@ B2Timer.setTags();
 //-----------------------------------------------------------------------
 //------------Breakout 1 Session 1-------------------------------------------
 var B1S1 ={
-    sesTitle:"Tools and Techniques for Effective CAA Board Leadership; Jonathan Cohen, Esq. and Edward Faust, Esq., CAPLAW",
-    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184077",
+    sesTitle:"Tools and Techniques for Effective CAA Board Leadership; Jonathan Cohen, Esq., CAPLAW",
+    bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/185439",
     dTs:"Session1",
     LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12695/lesson/50166/view",
 }
