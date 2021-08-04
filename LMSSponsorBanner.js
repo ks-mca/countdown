@@ -149,7 +149,6 @@ var bannerType;
         clearInterval(startBannerLoop);
     }
     function bannerLoop(){
-        console.log(bannerStatus);
         if (bannerStatus ===1) {
             document.getElementById("imgban2").style.opacity = "0";
             document.getElementById("imgban4").style.opacity = "0";
