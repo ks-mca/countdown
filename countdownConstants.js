@@ -92,7 +92,7 @@ function updateCountdowns(time, session){
             session.stopTimer=3;
         }
     }
-    else if((adjustedTime(time, 0, 0, -2)>session.sessionTimeEnd)&&(session.stopTimer<4)){//Display the ended message only
+    else if((adjustedTime(time, 0, 0, 0)>session.sessionTimeEnd)&&(session.stopTimer<4)){//Display the ended message only
         sessionEnded(session.countdownTag, session.msgTag, session.surveyLink);
         session.stopTimer=4;
     }
