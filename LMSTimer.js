@@ -345,7 +345,7 @@ function updateLMSCountdowns(time, session){
 function LMSEnded(timerTag, msgDisplayTag){//Session ended message
     HideField("#"+timerTag);
     document.querySelector("#"+msgDisplayTag).innerHTML = 
-        "<h2>The live sessions have ended<br><br>The replays should be available soon<br>We hope you have enjoyed the content<br><br>Remember to fill out your evaluations</h2>";
+        "<h2>The live sessions have ended<br><br>The replays should be available soon<br>We hope you have enjoyed the content<br><br>Remember to fill out your evaluations located in each session</h2>";
 }
 
 function LMSInProgress(timerTag, msgDisplayTag, sessionLink, buttonToUse, sessionType, displayCounter){//Session in progress messages
