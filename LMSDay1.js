@@ -195,7 +195,6 @@ var B2S3 ={
 
 setInterval(function(){
     var currentTime = new Date().getTime();
-    // console.log(currentTime.toLocaleString('en-US', { timeZone: 'UTC' }));
     
     var newTime = adjustedTime(currentTime, 0, 0, 0); //for testing
     currentTime = newTime; //for testing
