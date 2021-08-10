@@ -8,14 +8,14 @@ Provide the Session information need to populate the Day3Counters.html page.
 HideField('.JSNote'); //hide the enable javascript message
 //---------------------Day 3-------------------------------------------
 var dayTimer = {
-    session1StartTime:new Date("August 12, 2021 11:00:00").getTime(),
-    session1EndTime:new Date("August 12, 2021 11:45:00").getTime(),
+    session1StartTime:new Date("August 12, 2021 11:00:00 GMT-0400").getTime(),
+    session1EndTime:new Date("August 12, 2021 11:45:00 GMT-0400").getTime(),
     s1StopTimer:0,
-    session2StartTime:new Date("August 12, 2021 12:15:00").getTime(),
-    session2EndTime:new Date("August 12, 2021 13:15:00").getTime(),
+    session2StartTime:new Date("August 12, 2021 12:15:00 GMT-0400").getTime(),
+    session2EndTime:new Date("August 12, 2021 13:15:00 GMT-0400").getTime(),
     s2StopTimer:0,
-    session3StartTime:new Date("August 12, 2021 13:30:00").getTime(),
-    session3EndTime:new Date("August 12, 2021 14:30:00").getTime(),
+    session3StartTime:new Date("August 12, 2021 13:30:00 GMT-0400").getTime(),
+    session3EndTime:new Date("August 12, 2021 14:30:00 GMT-0400").getTime(),
     s3StopTimer:0,
 }
 
