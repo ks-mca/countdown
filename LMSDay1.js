@@ -12,14 +12,14 @@
 
 //---------------------Day 1-------------------------------------------
 var dayTimer = {
-    session1StartTime: new Date("August 10, 2021 11:00:00").getTime(),
-    session1EndTime: new Date("August 10, 2021 11:45:00").getTime(),
+    session1StartTime: new Date("August 10, 2021 11:00:00 GMT-0400").getTime(),
+    session1EndTime: new Date("August 10, 2021 11:45:00 GMT-0400").getTime(),
     s1StopTimer: 0,
-    session2StartTime: new Date("August 10, 2021 12:15:00").getTime(),
-    session2EndTime: new Date("August 10, 2021 13:15:00").getTime(),
+    session2StartTime: new Date("August 10, 2021 12:15:00 GMT-0400").getTime(),
+    session2EndTime: new Date("August 10, 2021 13:15:00 GMT-0400").getTime(),
     s2StopTimer: 0,
-    session3StartTime: new Date("August 10, 2021 13:30:00").getTime(),
-    session3EndTime: new Date("August 10, 2021 14:30:00").getTime(),
+    session3StartTime: new Date("August 10, 2021 13:30:00 GMT-0400").getTime(),
+    session3EndTime: new Date("August 10, 2021 14:30:00 GMT-0400").getTime(),
     s3StopTimer: 0
 }
 
@@ -195,6 +195,7 @@ var B2S3 ={
 
 setInterval(function(){
     var currentTime = new Date().getTime();
+    // console.log(currentTime.toLocaleString('en-US', { timeZone: 'UTC' }));
     
     var newTime = adjustedTime(currentTime, 0, 0, 0); //for testing
     currentTime = newTime; //for testing
