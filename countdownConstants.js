@@ -114,7 +114,7 @@ function updateCountdowns(time, session){
 function sessionEnded(timerTag, msgDisplayTag, evalLink){//Session ended message
     HideField("#"+timerTag);
     document.querySelector("#"+msgDisplayTag).innerHTML = "<h2>Live session has ended<br>The replay should be available soon</h2>"+
-    "<a class='sessionLink' href='" +evalLink+ "' target='_blank'><img style='display: block; margin-left: auto; margin-right: auto;' src='"+EvalButton+"' alt='Evaluate the Session' width='420' height='117'/></a>";
+    "<a class='sessionLink' href='" +evalLink+ "' target='_blank'><img style='display: block; margin-left: auto; margin-right: auto;' src='"+EvalButton+"' alt='Evaluate the Session' width='350' height='100'/></a>";
 }
 
 function sessionInProgress(timerTag, msgDisplayTag, sessionLink, buttonToUse, sessionType, displayCounter){//Session in progress messages
