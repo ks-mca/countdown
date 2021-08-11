@@ -142,7 +142,7 @@ B2Timer.setTags();
 //-----------------------------------------------------------------------
 //------------Breakout 1 Session 1-------------------------------------------
 var B1S1 ={
-    sesTitle:" Building Immigrant Inclusion to Local Anti-Poverty and Economic Opportunity Work; Fayrouz Saad, Global Michigan and Steve Tobocman, Global Detroit",
+    sesTitle:"Building Immigrant Inclusion to Local Anti-Poverty and Economic Opportunity Work; Fayrouz Saad, Global Michigan and Steve Tobocman, Global Detroit",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/183911",
     dTs:"Session1",
     LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50121/view",
