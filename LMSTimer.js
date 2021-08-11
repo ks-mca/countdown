@@ -325,7 +325,7 @@ function updateLMSCountdowns(time, session){
             session.stopTimer=3;
         }
     }
-    else if((adjustedTime(time, 0, 0, -5)>session.sessionTimeEnd)&&(session.stopTimer<4)){//Display the ended message only
+    else if((adjustedTime(time, 0, 0, 0)>session.sessionTimeEnd)&&(session.stopTimer<4)){//Display the ended message only
         LMSEnded(session.countdownTag, session.msgTag);
         session.stopTimer=4;
     }
