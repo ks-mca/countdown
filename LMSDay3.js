@@ -31,7 +31,7 @@ var KeynoteSpeach = {
     dTs: 'Keynote',
     dayTitle: dayTitle,
     sessionName: "Welcome to the final day of the 2021 MCA Virtual Conference",
-    sessionPresenter: "Join us for a Keynote Speach by:<br>Patrick Cooney",
+    sessionPresenter: "Join us for a Keynote Speech by:<br>Patrick Cooney",
     zoomLink: 'https://zoom.us/j/91709164260?pwd=SHBrRFk4RkQxVXRFYlhUbE8vd3pLdz09', //must include the http:// or https:// in order to work
     stopTimer: 0,
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184166",
