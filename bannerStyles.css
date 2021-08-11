@@ -40,6 +40,11 @@ body{
     -moz-transition: all ease-in-out 700ms;
     -o-transition: all ease-in-out 700ms;
 }
+.main-banner #imgban7{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .main-banner #imgban6{
     background-size: cover;
     background-position: center;
