@@ -31,7 +31,7 @@ var KeynoteSpeach = {
     dTs: 'Keynote',
     dayTitle: dayTitle,
     sessionName: "Welcome to Day 2 of the 2021 MCA Virtual Conference",
-    sessionPresenter: "Join us for a Keynote Speach by:<br>Dr. Donna M. Beegle",
+    sessionPresenter: "Join us for a Keynote Speech by:<br>Dr. Donna M. Beegle",
     zoomLink: 'https://zoom.us/j/96324184740?pwd=b08wbFVrcG5pTFp0dVRMSkxHOERSdz09', //must include the http:// or https:// in order to work
     stopTimer: 0,
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184076",
