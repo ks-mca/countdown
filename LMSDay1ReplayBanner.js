@@ -13,7 +13,7 @@
 var ses1 ={
     sesName:"Keynote Session",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/183843",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50120/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/13361/lesson/52886/view",
 }
 
 //-----------------------------------------------------------------------------
@@ -21,7 +21,7 @@ var ses1 ={
 var ses2 ={
     sesName:"Building Immigrant Inclusion to Local Anti-Poverty and Economic Opportunity Work; Fayrouz Saad, Global Michigan and Steve Tobocman, Global Detroit",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/183911",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50121/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/13361/lesson/52888/view",
 }
 
 //-----------------------------------------------------------------------------
@@ -29,7 +29,7 @@ var ses2 ={
 var ses3 ={
     sesName:"Living and Leading Boldly in Your 100-Year Life; Barbara Pagano",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/183919",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50122/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/13361/lesson/52889/view",
 }
 
 //-------------------------------------------------------------------------
@@ -37,7 +37,7 @@ var ses3 ={
 var ses4 ={
     sesName:"Cybersecurity Playbook in Action; Dan Miller, Wipfli and Brad Michaud, OLHSA",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184487",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50124/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/13361/lesson/52890/view",
 }
 
 //--------------------------------------------------------------------------
@@ -45,7 +45,7 @@ var ses4 ={
 var ses5 ={
     sesName:"Moving from Fundraising to Philanthropy; Regina Pinney, ED, Nonprofit Network",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/183973",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50126/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/13361/lesson/52892/view",
 }
 
 //--------------------------------------------------------------------
@@ -53,14 +53,14 @@ var ses5 ={
 var ses6 ={
     sesName:"Creating Fair Districts; Jim Masters, CCAP, NCRT",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/183974",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50127/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/13361/lesson/52893/view",
 }
 //--------------------------------------------------------------------
 //-----------------------------  Session 2 Room 3  -------------------
 var ses7 ={
     sesName:"Economic Mobility through SNAP E&T Community Partnerships – How Community Colleges and Community Action Agencies can partner up; Steph Smith NCAP, Katie Brown and José Miranda, ACCT",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/183975",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12693/lesson/50129/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/13361/lesson/52894/view",
 }
 
 document.getElementById("imgban2").style.opacity = "0";
