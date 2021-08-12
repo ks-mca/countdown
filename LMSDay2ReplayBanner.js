@@ -13,7 +13,7 @@
 var ses1 ={
     sesName:"Keynote Session",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184076",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12695/lesson/50165/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/13399/lesson/52943/view",
 }
 
 //-----------------------------------------------------------------------------
@@ -21,7 +21,7 @@ var ses1 ={
 var ses2 ={
     sesName:"Tools and Techniques for Effective CAA Board Leadership; Jonathan Cohen, Esq., CAPLAW",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/185439",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12695/lesson/50166/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/13399/lesson/52945/view",
 }
 
 //-----------------------------------------------------------------------------
@@ -29,7 +29,7 @@ var ses2 ={
 var ses3 ={
     sesName:"Communicating and Relating More Effectively Across Poverty Barriers Part 1; Dr. Donna M. Beegle",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184078",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12695/lesson/50167/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/13399/lesson/52946/view",
 }
 
 //-------------------------------------------------------------------------
@@ -37,7 +37,7 @@ var ses3 ={
 var ses4 ={
     sesName:"Employee Communications 101: Creating a Positive Workplace Culture; Katena Cain, PhD Nonprofit Network",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184079",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12695/lesson/50168/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/13399/lesson/52947/view",
 }
 
 //--------------------------------------------------------------------------
@@ -45,7 +45,7 @@ var ses4 ={
 var ses5 ={
     sesName:"Maximizing Success: CAA Personnel Policies and Practices Post-Pandemic; Jonathan Cohen, Esq. and Edward Faust, Esq., CAPLAW",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184080",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12695/lesson/50169/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/13399/lesson/52949/view",
 }
 
 //--------------------------------------------------------------------
@@ -53,14 +53,14 @@ var ses5 ={
 var ses6 ={
     sesName:"Communicating and Relating More Effectively Across Poverty Barriers Part 2; Dr. Donna M. Beegle",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184081",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12695/lesson/50170/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/13399/lesson/52950/view",
 }
 //--------------------------------------------------------------------
 //-----------------------------  Session 2 Room 3  -------------------
 var ses7 ={
     sesName:"ROMA Principles of Data Analysis for Boards; Barbara Mooney and Carey Gibson, Association of Nationally Certified ROMA Trainers",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184082",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12695/lesson/50171/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/13399/lesson/52951/view",
 }
 
 document.getElementById("imgban2").style.opacity = "0";
