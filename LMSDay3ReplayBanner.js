@@ -13,7 +13,7 @@
 var ses1 ={
     sesName:"Keynote Session",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184166",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12696/lesson/50173/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/13491/lesson/53295/view",
 }
 
 //-----------------------------------------------------------------------------
@@ -21,7 +21,7 @@ var ses1 ={
 var ses2 ={
     sesName:"Leveraging Data Locally: Utilizing data and data visualizations to empower community action work; Paige Teegarden, EmpowOR by CSST",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184167",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12696/lesson/50174/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/13491/lesson/53297/view",
 }
 
 //-----------------------------------------------------------------------------
@@ -29,7 +29,7 @@ var ses2 ={
 var ses3 ={
     sesName:"Quality Improvement 101; Ashley Mosier, Jefferson Franklin Community Action Corporation",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184168",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12696/lesson/50175/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/13491/lesson/53298/view",
 }
 
 //-------------------------------------------------------------------------
@@ -37,7 +37,7 @@ var ses3 ={
 var ses4 ={
     sesName:"Change, Crisis Management and Tending to Self; Katena Cain, PhD, Nonprofit Network",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184170",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12696/lesson/50176/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/13491/lesson/53299/view",
 }
 
 //--------------------------------------------------------------------------
@@ -45,7 +45,7 @@ var ses4 ={
 var ses5 ={
     sesName:"How to Raise Hell and Raise Money, Too; Alan Jennings",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184172",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12696/lesson/50177/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/13491/lesson/53301/view",
 }
 
 //--------------------------------------------------------------------
@@ -53,14 +53,14 @@ var ses5 ={
 var ses6 ={
     sesName:"Quality Improvement 201; Ashley Mosier, Jefferson Franklin Community Action Corporation",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184169",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12696/lesson/50178/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/13491/lesson/53302/view",
 }
 //--------------------------------------------------------------------
 //-----------------------------  Session 2 Room 3  -------------------
 var ses7 ={
     sesName:"Hiring Revolution; Trina Olson, Team Dynamics",
     bannerImgUrl: "https://mcac.mclms.net/en/content-library/access/184173",
-    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/12696/lesson/50179/view",
+    LMSLink:"https://mcac.mclms.net/en/profile/my-courses/13491/lesson/53303/view",
 }
 
 document.getElementById("imgban2").style.opacity = "0";
